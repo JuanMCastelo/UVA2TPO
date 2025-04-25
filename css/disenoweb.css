@@ -123,43 +123,40 @@
     border-radius: 12px;
   }
   
-/* ============================= */
-/* Estilos específicos para listas en la columna izquierda */
-/* ============================= */
-.fechas ul li,
-.bibliografia ul li {
-  padding: 12px 8px;
-  border-bottom: 1px solid #c5dbf0;
-  line-height: 1.8;
-  font-size: 1.05rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-  border-left: 4px solid transparent;
-}
-
-.fechas ul li:hover,
-.bibliografia ul li:hover {
-  background-color: #dceeff;
-  transform: translateY(-2px);
-  border-left: 4px solid #0073e6;
-  cursor: pointer;
-}
-
-/* Ícono separado */
-.icono {
-  flex-shrink: 0;
-  font-size: 1.2rem;
-}
-
-/* Quitar la línea del último ítem */
-.fechas ul li:last-child,
-.bibliografia ul li:last-child {
-  border-bottom: none;
-}
-
-
+  /* ============================= */
+  /* Listas específicas de la izquierda */
+  /* ============================= */
+  .fechas ul li,
+  .bibliografia ul li {
+    padding: 12px 8px;
+    border-bottom: 1px solid #c5dbf0;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+  }
+  
+  .fechas ul li:hover,
+  .bibliografia ul li:hover {
+    background-color: #dceeff;
+    transform: translateY(-2px);
+    border-left: 4px solid #0073e6;
+    cursor: pointer;
+  }
+  
+  .fechas ul li:last-child,
+  .bibliografia ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .icono {
+    flex-shrink: 0;
+    font-size: 1.2rem;
+  }
+  
   /* ============================= */
   /* Tarjetas de Actividades       */
   /* ============================= */
@@ -207,7 +204,6 @@
     gap: 8px;
   }
   
-  /* Botones de enlaces */
   .btn {
     background: #0073e6;
     color: #ffffff;
@@ -216,7 +212,7 @@
     border-radius: 20px;
     font-size: 0.9rem;
     text-align: center;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
   }
   
   .btn:hover {
