@@ -3,137 +3,158 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-  body {
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f5f5f5;
-    color: #333;
-  }
+    background-color: #E8F6EF; /* Fondo general verde muy claro */
+    color: #1D8348; /* Verde fuerte para textos */
+}
   
-  /* Header */
-  header nav {
-    background-color: #d3d3d3;
+/* Header */
+header nav {
+    background-color: #28B463; /* Verde vibrante para el menú */
     text-align: center;
     padding: 15px;
     font-weight: bold;
-  }
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
   
-  /* Main title */
-  main h1 {
+/* Main title */
+main h1 {
     text-align: center;
     padding: 20px 0;
     font-size: 1.8em;
-  }
+    color: #1D8348; /* Verde fuerte */
+}
   
-  /* Contenedor principal */
-  .contenedor-principal {
+/* Contenedor principal */
+.contenedor-principal, .contenedor {
     display: flex;
     flex: 1;
     padding: 20px;
     gap: 20px;
     flex-wrap: wrap;
-  }
+}
   
-  /* Columna izquierda */
-  .izquierda {
+/* Columna izquierda */
+.izquierda {
     display: flex;
     flex-direction: column;
     width: 35%;
     gap: 20px;
-  }
+}
   
-  .fechas, .bibliografia {
-    background-color: #e0e0e0;
+.fechas, .bibliografia {
+    background-color: #D5F5E3; /* Verde suave */
     padding: 15px;
     border-radius: 5px;
-  }
+}
   
-  /* Columna derecha */
-  .derecha {
+/* Columna derecha */
+.derecha {
     width: 65%;
-  }
+}
   
-  .actividades {
-    background-color: #e0e0e0;
+.actividades {
+    background-color: #D5F5E3; /* Verde suave */
     padding: 15px;
     border-radius: 5px;
-  }
+}
   
-  /* Footer */
-  footer {
-    background-color: #d3d3d3;
+/* Footer */
+footer {
+    background-color: #28B463; /* Verde vivo */
     text-align: center;
     padding: 10px;
+    color: white;
     margin-top: auto;
-  }
+}
   
-  /* Tarjetas de actividades */
-  .actividad {
+/* Tarjetas de actividades */
+.actividad {
     background-color: white;
-    border: 1px solid #ccc;
+    border: 2px solid #D5F5E3; /* Bordes suaves verdes */
     border-radius: 6px;
     padding: 15px;
     margin-bottom: 15px;
-  }
+}
   
-  /* Contenido interno de cada actividad */
-  .contenido-actividad {
+/* Contenido interno de cada actividad */
+.contenido-actividad {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-  }
+}
   
-  /* Parte izquierda: título + vencimiento */
-  .info {
+/* Parte izquierda: título + vencimiento */
+.info {
     flex: 1;
     display: flex;
     flex-direction: column;
-  }
+}
   
-  /* Parte derecha: enlaces */
-  .enlaces {
+/* Parte derecha: enlaces */
+.enlaces {
     text-align: right;
     display: flex;
     flex-direction: column;
     gap: 5px;
-  }
+}
   
-  .titulo {
+.titulo {
     font-weight: bold;
     font-size: 1rem;
-  }
+    color: #1D8348; /* Verde fuerte */
+}
   
-  .vencimiento {
+.vencimiento {
     font-size: 0.9rem;
-    color: #555;
-  }
+    color: #239B56; /* Verde intermedio */
+}
   
-  .enlaces a {
-    color: #0073e6;
+.enlaces a {
+    color: #28B463; /* Verde vivo */
     text-decoration: none;
     font-weight: bold;
-  }
+}
   
-  .enlaces a:hover {
+.enlaces a:hover {
     text-decoration: underline;
-  }
+}
   
-  /* Listas en fechas y bibliografía */
-  .fechas ul, .bibliografia ul {
+/* Listas en fechas y bibliografía */
+.fechas ul, .bibliografia ul {
     padding-left: 20px;
     list-style-type: disc;
-  }
+}
   
-  /* Responsive para dispositivos móviles */
-  @media (max-width: 768px) {
-    .contenedor-principal {
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor-principal, .contenedor {
       flex-direction: column;
     }
   
@@ -152,5 +173,4 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-  }
-  
+}
