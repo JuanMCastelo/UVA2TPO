@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Navegación */
+  nav {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Título principal */
+  .titulo {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Contenedor principal */
+  .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Columnas */
+  .columna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+  }
+  
+  /* Bloques de contenido */
+  .bloque {
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .bloque h2 {
+    margin-bottom: 10px;
+  }
+  
+  .bloque ul {
+    list-style: none;
+  }
+  
+  .bloque ul li {
+    margin-bottom: 8px;
+  }
+  
+  .bloque a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  
+  .bloque a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #ddd;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contenedor {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
