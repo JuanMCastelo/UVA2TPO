@@ -1,20 +1,34 @@
-/* Reset */
+/* ============================= */
+/* Reset básico                  */
+/* ============================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  ul, ol {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
   body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #333333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #333333;
   }
   
-  /* Navbar */
+  /* ============================= */
+  /* Navbar                        */
+  /* ============================= */
   .navbar {
     background: #003366;
     padding: 15px 20px;
@@ -34,7 +48,6 @@
   }
   
   .nav-links {
-    list-style: none;
     display: flex;
     gap: 25px;
   }
@@ -61,7 +74,14 @@
     width: 100%;
   }
   
-  /* Main title */
+  /* ============================= */
+  /* Main                          */
+  /* ============================= */
+  main {
+    flex: 1;
+    padding-bottom: 20px;
+  }
+  
   main h1 {
     text-align: center;
     margin: 20px 0;
@@ -69,7 +89,9 @@
     color: #003366;
   }
   
-  /* Contenedor principal */
+  /* ============================= */
+  /* Contenedor Principal          */
+  /* ============================= */
   .contenedor-principal {
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +100,9 @@
     gap: 20px;
   }
   
-  /* Columnas */
+  /* ============================= */
+  /* Columnas                      */
+  /* ============================= */
   .izquierda {
     flex: 1;
     max-width: 33.33%;
@@ -94,23 +118,27 @@
   
   .fechas, .bibliografia, .actividades {
     background: #f5f7fa;
-    padding: 15px;
+    padding: 20px;
     border: 1px solid #dadde1;
-    border-radius: 8px;
+    border-radius: 12px;
   }
   
-  /* Tarjetas actividades */
+  /* ============================= */
+  /* Tarjetas de Actividades       */
+  /* ============================= */
   .actividad {
     background: #ffffff;
     border: 1px solid #dadde1;
-    border-radius: 8px;
-    padding: 15px;
+    border-radius: 12px;
+    padding: 20px;
     margin-bottom: 15px;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s;
   }
   
   .actividad:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    background: #f0f8ff;
   }
   
   .contenido-actividad {
@@ -137,23 +165,30 @@
   }
   
   .enlaces {
-    text-align: right;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
   }
   
-  .enlaces a {
-    color: #0073e6;
+  /* Botones de enlaces */
+  .btn {
+    background: #0073e6;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background 0.3s;
   }
   
-  .enlaces a:hover {
-    text-decoration: underline;
+  .btn:hover {
+    background: #005bb5;
   }
   
-  /* Footer */
+  /* ============================= */
+  /* Footer                        */
+  /* ============================= */
   footer {
     background: #003366;
     text-align: center;
@@ -161,7 +196,9 @@
     color: #ffffff;
   }
   
-  /* Responsive */
+  /* ============================= */
+  /* Responsive                    */
+  /* ============================= */
   @media (max-width: 768px) {
     .contenedor-principal {
       flex-direction: column;
