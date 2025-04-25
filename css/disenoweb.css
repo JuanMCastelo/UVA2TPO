@@ -19,23 +19,22 @@
     min-height: 100vh;
   }
   
-  /* Contenido principal */
-  .contenido {
-    flex: 1;
+  /* Contenedor principal centrado */
+  .contenedor-principal {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     padding: 20px;
+    flex: 1;
   }
   
-  /* Tarjeta central */
-  .tarjeta {
+  /* Tarjeta principal */
+  .contenido {
+    width: 100%;
+    max-width: 1200px;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.05);
-    max-width: 1200px;
-    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   }
   
   /* Navegación */
@@ -53,7 +52,7 @@
     text-align: center;
   }
   
-  /* Layout */
+  /* Layout de columnas */
   .layout {
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +60,6 @@
     margin-top: 20px;
   }
   
-  /* Columnas */
   .columna-izquierda {
     flex: 1 1 20%;
     display: flex;
