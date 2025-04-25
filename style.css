@@ -103,8 +103,8 @@ footer {
 /* ==================== */
 
 img.perfil-img {
-    width: 250px!important;
-    height: 350px!important;
+    width: 500px!important;
+    height: 700px!important;
     object-fit: cover!important;
     border-radius: 8px!important;
     border: 3px solid #343a40!important;
