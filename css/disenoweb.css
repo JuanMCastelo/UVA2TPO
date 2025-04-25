@@ -3,157 +3,162 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
   
-body {
+  body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #333333; /* Texto principal */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #E8F6EF; /* Fondo general verde muy claro */
-    color: #1D8348; /* Verde fuerte para textos */
-}
+  }
   
-/* Header */
-header nav {
-    background-color: #28B463; /* Verde vibrante para el menú */
-    text-align: center;
-    padding: 15px;
-    font-weight: bold;
-}
-
-header nav ul {
+  /* HEADER */
+  header {
+    background-color: #003366; /* Azul institucional */
+  }
+  
+  header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
-}
-
-header nav ul li a {
-    color: white;
+    padding: 15px 0;
+  }
+  
+  header nav ul li a {
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
+  }
   
-/* Main title */
-main h1 {
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* TÍTULO PRINCIPAL */
+  main h1 {
     text-align: center;
     padding: 20px 0;
-    font-size: 1.8em;
-    color: #1D8348; /* Verde fuerte */
-}
+    font-size: 2em;
+    color: #003366;
+  }
   
-/* Contenedor principal */
-.contenedor-principal, .contenedor {
+  /* CONTENEDOR PRINCIPAL */
+  .contenedor-principal, .contenedor {
     display: flex;
     flex: 1;
     padding: 20px;
     gap: 20px;
     flex-wrap: wrap;
-}
+  }
   
-/* Columna izquierda */
-.izquierda {
+  /* COLUMNA IZQUIERDA */
+  .izquierda {
     display: flex;
     flex-direction: column;
     width: 35%;
     gap: 20px;
-}
+  }
   
-.fechas, .bibliografia {
-    background-color: #D5F5E3; /* Verde suave */
+  .fechas, .bibliografia {
+    background-color: #F5F7FA; /* Fondo gris claro */
+    border: 1px solid #DADDE1;
     padding: 15px;
-    border-radius: 5px;
-}
+    border-radius: 8px;
+  }
   
-/* Columna derecha */
-.derecha {
+  /* COLUMNA DERECHA */
+  .derecha {
     width: 65%;
-}
+  }
   
-.actividades {
-    background-color: #D5F5E3; /* Verde suave */
+  .actividades {
+    background-color: #F5F7FA;
     padding: 15px;
-    border-radius: 5px;
-}
+    border-radius: 8px;
+    border: 1px solid #DADDE1;
+  }
   
-/* Footer */
-footer {
-    background-color: #28B463; /* Verde vivo */
+  /* FOOTER */
+  footer {
+    background-color: #003366;
     text-align: center;
     padding: 10px;
     color: white;
     margin-top: auto;
-}
+  }
   
-/* Tarjetas de actividades */
-.actividad {
+  /* TARJETAS DE ACTIVIDADES */
+  .actividad {
     background-color: white;
-    border: 2px solid #D5F5E3; /* Bordes suaves verdes */
-    border-radius: 6px;
+    border: 1px solid #DADDE1;
+    border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
-}
+    transition: box-shadow 0.3s ease;
+  }
   
-/* Contenido interno de cada actividad */
-.contenido-actividad {
+  .actividad:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* CONTENIDO INTERNO */
+  .contenido-actividad {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-}
+  }
   
-/* Parte izquierda: título + vencimiento */
-.info {
+  /* PARTE IZQUIERDA */
+  .info {
     flex: 1;
     display: flex;
     flex-direction: column;
-}
+  }
   
-/* Parte derecha: enlaces */
-.enlaces {
+  .titulo {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #003366;
+  }
+  
+  .vencimiento {
+    font-size: 0.9rem;
+    color: #555555;
+  }
+  
+  /* PARTE DERECHA */
+  .enlaces {
     text-align: right;
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
+  }
   
-.titulo {
-    font-weight: bold;
-    font-size: 1rem;
-    color: #1D8348; /* Verde fuerte */
-}
-  
-.vencimiento {
-    font-size: 0.9rem;
-    color: #239B56; /* Verde intermedio */
-}
-  
-.enlaces a {
-    color: #28B463; /* Verde vivo */
+  .enlaces a {
+    color: #0073E6; /* Azul UADE para enlaces */
     text-decoration: none;
     font-weight: bold;
-}
+  }
   
-.enlaces a:hover {
+  .enlaces a:hover {
     text-decoration: underline;
-}
+  }
   
-/* Listas en fechas y bibliografía */
-.fechas ul, .bibliografia ul {
+  /* LISTAS */
+  .fechas ul, .bibliografia ul {
     padding-left: 20px;
     list-style-type: disc;
-}
+  }
   
-/* Responsive para dispositivos móviles */
-@media (max-width: 768px) {
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
     .contenedor-principal, .contenedor {
       flex-direction: column;
     }
@@ -173,4 +178,5 @@ footer {
       flex-wrap: wrap;
       gap: 10px;
     }
-}
+  }
+  
