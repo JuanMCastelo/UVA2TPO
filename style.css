@@ -103,13 +103,14 @@ footer {
 /* ==================== */
 
 img.perfil-img {
-    width: 500px!important;
-    height: 700px!important;
-    object-fit: cover!important;
-    border-radius: 8px!important;
-    border: 3px solid #343a40!important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease!important;
-    animation: zoomIn 1s!important;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #343a40;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 1s;
 }
 
 img.perfil-img:hover {
@@ -150,10 +151,10 @@ button.btn-dark:hover {
 /* ==================== */
 
 .materia-box {
-    border: 1px solid #dee2e6; /* Borde gris claro */
+    border: 1px solid #dee2e6;
     border-radius: 10px;
-    background-color: #ffffff; /* Blanco para mantener gama */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     margin-bottom: 2rem;
     overflow: hidden;
     transition: transform 0.2s ease;
@@ -177,7 +178,6 @@ button.btn-dark:hover {
     padding: 0.75rem;
 }
 
-/* Caja interior */
 .materia-contenido {
     padding: 1rem;
     background-color: #ffffff;
@@ -219,6 +219,24 @@ button.btn-dark:hover {
     margin-right: 6px;
 }
 
+/* ==================== */
+/* SOBRE MÍ - Ajustes personalizados */
+/* ==================== */
+
+.sobre-mi-row {
+    row-gap: 2rem;
+    column-gap: 3rem;
+}
+
+.sobre-mi-texto {
+    margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+    .sobre-mi-texto {
+        margin-left: 2rem;
+    }
+}
 
 /* ==================== */
 /* RESPONSIVE */
@@ -235,7 +253,7 @@ button.btn-dark:hover {
 
     .perfil-img {
         width: 150px;
-        height: 150px;
+        height: auto;
     }
 
     .navbar-brand {
