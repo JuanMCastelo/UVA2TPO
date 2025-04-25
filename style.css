@@ -103,13 +103,13 @@ footer {
 /* ==================== */
 
 img.perfil-img {
-    width: 250px;            /* Ancho mayor */
-    height: 350px;           /* Alto proporcional para rectángulo vertical */
-    object-fit: cover;       /* Recorta manteniendo proporción */
-    border-radius: 8px;      /* Esquinas levemente redondeadas */
-    border: 3px solid #343a40;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: zoomIn 1s;
+    width: 250px!important;
+    height: 350px!important;
+    object-fit: cover!important;
+    border-radius: 8px!important;
+    border: 3px solid #343a40!important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease!important;
+    animation: zoomIn 1s!important;
 }
 
 img.perfil-img:hover {
