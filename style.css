@@ -1,49 +1,49 @@
 /* Importar animaciones de Animate.css */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
-/* Estilo general del cuerpo de la página */
+/* ==================== */
+/* ESTILOS GENERALES */
+/* ==================== */
+
 body {
-    background-color: #f8f9fa; /* Fondo gris muy claro */
-    color: #212529; /* Color de texto oscuro */
-    font-family: 'Roboto', sans-serif; /* Fuente moderna */
-    transition: background-color 0.5s ease, color 0.5s ease; /* Transiciones suaves */
+    background-color: #f8f9fa;
+    color: #212529;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Estilo para todos los encabezados */
 h1, h2, h3, h4, h5, h6 {
-    color: #343a40; /* Gris oscuro */
-    font-weight: 700; /* Texto en negrita */
+    color: #343a40;
+    font-weight: 700;
 }
 
-/* Estilo general de los enlaces */
 a {
-    color: #6c757d; /* Color de enlaces */
-    text-decoration: none; /* Sin subrayado por defecto */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transiciones suaves */
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Efecto hover en enlaces */
 a:hover {
-    color: #000; /* Cambio de color al pasar el mouse */
-    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: #000;
+    text-decoration: underline;
 }
 
-/* Estilo general de la barra de navegación */
+/* ==================== */
+/* BARRA DE NAVEGACIÓN */
+/* ==================== */
+
 .navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo del botón hamburguesa */
 .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1); /* Color del borde */
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Icono personalizado del menú hamburguesa */
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' ..."); /* Icono blanco */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Estilos de los links en la barra de navegación */
 .nav-link {
     position: relative;
     transition: color 0.3s ease;
@@ -51,7 +51,6 @@ a:hover {
     display: block;
 }
 
-/* Línea animada al pasar el mouse sobre links del menú */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -63,95 +62,107 @@ a:hover {
     transition: width 0.3s;
 }
 
-/* Expandir la línea cuando se pasa el mouse */
 .nav-link:hover::after {
     width: 100%;
 }
 
-/* Estilo general de las tablas */
+/* ==================== */
+/* TABLAS */
+/* ==================== */
+
 .table {
     background-color: #fff;
-    border-radius: 8px; /* Bordes redondeados */
-    overflow: hidden; /* Para que el borde redondeado funcione */
-    animation: fadeIn 1s; /* Animación de entrada */
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeIn 1s;
 }
 
-/* Encabezado de tabla */
 .table thead {
     background-color: #212529;
     color: white;
 }
 
-/* Efecto hover en filas de la tabla */
 .table-hover tbody tr:hover {
-    background-color: #dee2e6; /* Cambio de color en hover */
+    background-color: #dee2e6;
 }
 
-/* Estilo del footer */
+/* ==================== */
+/* FOOTER */
+/* ==================== */
+
 footer {
     margin-top: 50px;
-    background: linear-gradient(90deg, #343a40, #212529); /* Degradado gris oscuro */
+    background: linear-gradient(90deg, #343a40, #212529);
     font-size: 0.9rem;
     letter-spacing: 1px;
-    animation: fadeInUp 1s; /* Animación de entrada */
+    animation: fadeInUp 1s;
 }
 
-/* Estilo de la imagen de perfil */
+/* ==================== */
+/* IMÁGENES */
+/* ==================== */
+
 img.perfil-img {
     width: 200px;
     height: 200px;
-    object-fit: cover; /* No deformar imagen */
-    border-radius: 50%; /* Imagen circular */
-    border: 3px solid #343a40; /* Borde gris oscuro */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #343a40;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: zoomIn 1s; /* Animación de entrada */
+    animation: zoomIn 1s;
 }
 
-/* Efecto hover sobre la imagen de perfil */
 img.perfil-img:hover {
-    transform: scale(1.1) rotate(2deg); /* Agrandar y girar levemente */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra al agrandar */
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Botones principales en el formulario */
+/* ==================== */
+/* BOTONES */
+/* ==================== */
+
 button.btn-dark {
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Efecto hover en botones */
 button.btn-dark:hover {
-    background-color: #000; /* Fondo completamente negro */
-    transform: scale(1.05); /* Agrandar levemente */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra al hover */
+    background-color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo de los ítems de lista */
+/* ==================== */
+/* LISTAS */
+/* ==================== */
+
 .list-group-item {
     transition: background-color 0.3s ease, transform 0.2s ease;
-    animation: fadeInLeft 1s; /* Animación de entrada lateral */
+    animation: fadeInLeft 1s;
 }
 
-/* Efecto hover en ítems de lista */
 .list-group-item:hover {
     background-color: #ced4da;
     transform: scale(1.02);
 }
 
-/* Animaciones generales en contenedores */
-.container, .section, .header {
-    animation: fadeInUp 1s;
-}
+/* ==================== */
+/* MATERIA BOXES */
+/* ==================== */
 
-/* Caja de información de materia */
 .materia-box {
     background-color: #e9eef5;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     animation: fadeInUp 1s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
 }
 
-/* Encabezado de materia */
+.materia-box:hover {
+    transform: translateY(-3px);
+}
+
 .materia-header {
     background-color: #6c848e;
     padding: 1rem;
@@ -171,6 +182,7 @@ button.btn-dark:hover {
     font-weight: 600;
     padding: 0.5rem;
     border-top: 1px solid #ccc;
+    font-size: 1rem;
 }
 
 /* Caja interior */
@@ -178,7 +190,11 @@ button.btn-dark:hover {
     background-color: #d8e6f2;
 }
 
-/* Etiqueta VIRT */
+.materia-contenido .row {
+    margin: 0;
+}
+
+/* Etiqueta VIRT/PRES */
 .etiqueta-virt {
     background-color: #0056b3;
     color: white;
@@ -186,6 +202,7 @@ button.btn-dark:hover {
     padding: 10px 20px;
     border-radius: 6px;
     font-size: 1.2rem;
+    display: inline-block;
 }
 
 .horario {
@@ -193,19 +210,22 @@ button.btn-dark:hover {
     font-weight: 500;
 }
 
-/* Iconos + texto */
+/* Lista de datos */
 .materia-contenido ul li {
     padding: 4px 0;
     font-size: 0.95rem;
 }
 
-/* Ajustes íconos si usás Bootstrap Icons */
+/* Íconos */
 .materia-contenido i {
     margin-right: 5px;
     color: #495057;
 }
 
-/* Ajustes RESPONSIVE (pantallas pequeñas) */
+/* ==================== */
+/* RESPONSIVE */
+/* ==================== */
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -232,9 +252,17 @@ button.btn-dark:hover {
     footer {
         font-size: 0.8rem;
     }
+
+    .etiqueta-virt {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
 }
 
-/* Definición de la animación fadeInUp (entrada desde abajo) */
+/* ==================== */
+/* ANIMACIONES PERSONALIZADAS */
+/* ==================== */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
