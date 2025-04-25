@@ -217,7 +217,7 @@ button.btn-dark:hover {
 }
 
 /* ==================== */
-/* SOBRE MÍ - NUEVO DISEÑO MEJORADO */
+/* SOBRE MÍ             */
 /* ==================== */
 
 .sobre-mi-seccion {
@@ -257,6 +257,29 @@ button.btn-dark:hover {
 
 .hobbies {
     font-weight: 600;
+}
+
+/* ==================== */
+/* ESTRUCTURA GENERAL PARA FOOTER FIJO */
+/* ==================== */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* ==================== */
