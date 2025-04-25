@@ -6,20 +6,17 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    color: #333;
-  }
-
-  .main-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    /* Set a light background for better readability */
+    background-color: #f5f5f5;
+    color: #333;
   }
   
-  /* Encabezado */
+  /* Header */
   header nav {
     background-color: #d3d3d3;
     text-align: center;
@@ -27,36 +24,28 @@
     font-weight: bold;
   }
   
-  /* Título */
+  /* Main title */
   main h1 {
     text-align: center;
     padding: 20px 0;
+    font-size: 1.8em;
   }
-
+  
+  /* Contenedor principal */
   .contenedor-principal {
     display: flex;
     flex: 1;
     padding: 20px;
     gap: 20px;
-  }
-
-  .contenedor-principal > * {
-    margin: 0 10px; /* Fallback for older browsers */
-  }
-
-  .contenedor-principal > *:first-child {
-    margin-left: 0; /* Adjust for the first child */
-  }
-
-  .contenedor-principal > *:last-child {
-    margin-right: 0; /* Adjust for the last child */
+    flex-wrap: wrap;
   }
   
   /* Columna izquierda */
   .izquierda {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    flex-basis: 35%;
+    flex-grow: 1;
     gap: 20px;
   }
   
@@ -66,11 +55,10 @@
     border-radius: 5px;
   }
   
-  /* Columna derecha */
   .derecha {
-    width: 65%;
+    flex: 2;
+    flex-basis: 0;
   }
-  
   .actividades {
     background-color: #e0e0e0;
     padding: 15px;
@@ -85,46 +73,87 @@
     margin-top: auto;
   }
   
-  /* Estilos para actividades */
+  /* Tarjetas de actividades */
   .actividad {
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid #e0e0e0;
     border-radius: 6px;
-    padding: 10px 15px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
   }
   
-  .actividad p {
-    margin: 0;
+  /* Contenido interno de cada actividad */
+  .contenido-actividad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
   }
   
-  .actividad a {
-    color: #005bb5; /* Improved contrast color */
-    text-decoration: none;
+  /* Parte izquierda: título + vencimiento */
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Parte derecha: enlaces */
+  .enlaces {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .titulo {
     font-weight: bold;
+    font-size: 1rem;
   }
   
-  .actividad a:hover {
+  .vencimiento {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .enlaces a {
+      color: #0073e6;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+  }
+  
+  .enlaces a:hover {
     text-decoration: underline;
   }
   
-  /* Listas */
+  /* Listas en fechas y bibliografía */
   .fechas ul, .bibliografia ul {
     padding-left: 20px;
-    list-style-type: disc;
-  /* Responsive */
-  /* The breakpoint at max-width: 768px is chosen to target tablets and smaller devices for better layout adjustments */
+    list-style-type: square; /* Changed to square for a unique appearance */
+    color: #0073e6; /* Custom color for list markers */
+  }
+  
   @media (max-width: 768px) {
     .contenedor-principal {
       flex-direction: column;
     }
   
-    .izquierda,
-    .derecha {
+    /* Ensure full-width layout for mobile devices */
+    .izquierda, .derecha {
       width: 100%;
     }
-  }
-    }
-
   
-    /* Fin de los estilos */  
+    .contenido-actividad {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .enlaces {
+      text-align: left;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  
