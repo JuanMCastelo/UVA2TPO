@@ -128,11 +128,14 @@
 /* ============================= */
 .fechas ul li,
 .bibliografia ul li {
-  padding: 10px 0;
+  padding: 12px 8px;
   border-bottom: 1px solid #c5dbf0;
   line-height: 1.8;
-  font-size: 1rem;  
-  transition: background-color 0.3s ease;  
+  font-size: 1.05rem; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
 }
 
 /* Quitar la línea del último ítem de cada lista */
@@ -144,7 +147,7 @@
 /* Hover sobre ítems */
 .fechas ul li:hover,
 .bibliografia ul li:hover {
-  background-color: #eaf4ff;  
+  background-color: #eaf4ff;
   cursor: pointer;
 }
 
