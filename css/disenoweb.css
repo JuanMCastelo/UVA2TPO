@@ -131,24 +131,28 @@
   padding: 12px 8px;
   border-bottom: 1px solid #c5dbf0;
   line-height: 1.8;
-  font-size: 1.05rem; 
+  font-size: 1.05rem;
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease; /* necesario para suavizar todos los efectos */
+  border-left: 4px solid transparent;
 }
+
+/* Hover efecto claro y visible */
+.fechas ul li:hover,
+.bibliografia ul li:hover {
+  background-color: #dceeff; /* azul más fuerte */
+  transform: translateY(-2px); /* efecto levantar */
+  border-left: 4px solid #0073e6; /* barra azul a la izquierda */
+  cursor: pointer;
+}
+
 
 /* Quitar la línea del último ítem de cada lista */
 .fechas ul li:last-child,
 .bibliografia ul li:last-child {
   border-bottom: none;
-}
-
-/* Hover sobre ítems */
-.fechas ul li:hover,
-.bibliografia ul li:hover {
-  background-color: #eaf4ff;
-  cursor: pointer;
 }
 
   /* ============================= */
