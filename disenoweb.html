@@ -4,91 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diseño y Desarrollo Web</title>
-  <link rel="stylesheet" href="css/disenoweb.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    h1, h5 {
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
-<body>
-  <div class="contenido">
-    <header>
-      <nav>
-        <h3>Enlaces del menú</h3>
-      </nav>
-    </header>
+<body class="d-flex flex-column min-vh-100">
 
-    <main>
-      <section class="titulo">
-        <h1>Diseño y Desarrollo Web</h1>
-      </section>
+  <nav class="bg-light py-2 text-center border-bottom">
+    <h5 class="m-0">Enlaces del menú</h5>
+  </nav>
 
-      <section class="contenedor">
-        <div class="columna">
-          <article class="bloque">
-            <h2>Fechas de exámenes</h2>
-          </article>
-          <article class="bloque">
-            <h2>Bibliografía</h2>
-          </article>
+  <main class="container my-4 flex-grow-1">
+    <div class="bg-white p-4 rounded shadow-sm">
+      <h1 class="text-center mb-4">Diseño y Desarrollo Web</h1>
+      
+      <div class="row g-4">
+        <!-- Columna izquierda -->
+        <div class="col-md-4">
+          <div class="mb-3 p-3 bg-light border rounded">
+            <h5>Fechas de exámenes</h5>
+          </div>
+          <div class="p-3 bg-light border rounded">
+            <h5>Bibliografía</h5>
+          </div>
         </div>
-        <div class="columna">
-          <article class="bloque">
-            <h2>Actividades UVAs</h2>
-            <div class="tabla-actividades">
-              <div class="actividad">
-                <p><strong>Ejercicio individual: HTML - Introducción</strong><br>
-                Vence el 25 de abril de 2025 23:59<br>
+
+        <!-- Columna derecha -->
+        <div class="col-md-8">
+          <div class="p-3 bg-light border rounded">
+            <h5 class="mb-3">Actividades UVAs</h5>
+
+            <div class="d-flex flex-column gap-3">
+              <!-- Bloques de actividades -->
+              <div class="p-3 bg-white border rounded shadow-sm">
+                <p class="mb-1 fw-semibold">Ejercicio individual: HTML - Introducción</p>
+                <p class="mb-1">Vence el 25 de abril de 2025 23:59</p>
                 <a href="https://github.com/JuanMCastelo/UVA1TP1" target="_blank">Repositorio</a> |
-                <a href="https://JuanMCastelo.github.io/UVA1TP1" target="_blank">GitHub Page</a></p>
+                <a href="https://JuanMCastelo.github.io/UVA1TP1" target="_blank">GitHub Page</a>
               </div>
-              <div class="actividad">
-                <p><strong>Ejercicio individual: HTML - Etiquetas</strong><br>
-                Vence el 25 de abril de 2025 23:59<br>
+
+              <div class="p-3 bg-white border rounded shadow-sm">
+                <p class="mb-1 fw-semibold">Ejercicio individual: HTML - Etiquetas</p>
+                <p class="mb-1">Vence el 25 de abril de 2025 23:59</p>
                 <a href="https://github.com/JuanMCastelo/UVA1TP2" target="_blank">Repositorio</a> |
-                <a href="https://JuanMCastelo.github.io/UVA1TP2" target="_blank">GitHub Page</a></p>
+                <a href="https://JuanMCastelo.github.io/UVA1TP2" target="_blank">GitHub Page</a>
               </div>
-              <div class="actividad">
-                <p><strong>Ejercicio individual: Ejercicio integrador (obligatorio)</strong><br>
-                Vence el 25 de abril de 2025 23:59<br>
+
+              <div class="p-3 bg-white border rounded shadow-sm">
+                <p class="mb-1 fw-semibold">Ejercicio individual: Ejercicio integrador (obligatorio)</p>
+                <p class="mb-1">Vence el 25 de abril de 2025 23:59</p>
                 <a href="https://github.com/JuanMCastelo/UVA1TPO" target="_blank">Repositorio</a> |
-                <a href="https://JuanMCastelo.github.io/UVA1TPO" target="_blank">GitHub Page</a></p>
+                <a href="https://JuanMCastelo.github.io/UVA1TPO" target="_blank">GitHub Page</a>
               </div>
-              <div class="actividad">
-                <p><strong>Ejercicio individual: Formato de texto</strong><br>
-                Vence el 25 de abril de 2025 23:59<br>
+
+              <div class="p-3 bg-white border rounded shadow-sm">
+                <p class="mb-1 fw-semibold">Ejercicio individual: Formato de texto</p>
+                <p class="mb-1">Vence el 25 de abril de 2025 23:59</p>
                 <a href="https://github.com/JuanMCastelo/UVA2TP1" target="_blank">Repositorio</a> |
-                <a href="https://JuanMCastelo.github.io/UVA2TP1" target="_blank">GitHub Page</a></p>
+                <a href="https://JuanMCastelo.github.io/UVA2TP1" target="_blank">GitHub Page</a>
               </div>
-              <div class="actividad">
-                <p><strong>Ejercicio individual: Formato de cajas</strong><br>
-                Vence el 25 de abril de 2025 23:59<br>
+
+              <div class="p-3 bg-white border rounded shadow-sm">
+                <p class="mb-1 fw-semibold">Ejercicio individual: Formato de cajas</p>
+                <p class="mb-1">Vence el 25 de abril de 2025 23:59</p>
                 <a href="https://github.com/JuanMCastelo/UVA2TP2" target="_blank">Repositorio</a> |
-                <a href="https://JuanMCastelo.github.io/UVA2TP2" target="_blank">GitHub Page</a></p>
+                <a href="https://JuanMCastelo.github.io/UVA2TP2" target="_blank">GitHub Page</a>
               </div>
-              <div class="actividad">
-                <p><strong>Ejercicio individual: Unidades de medida</strong><br>
-                Vence el 25 de abril de 2025 23:59<br>
+
+              <div class="p-3 bg-white border rounded shadow-sm">
+                <p class="mb-1 fw-semibold">Ejercicio individual: Unidades de medida</p>
+                <p class="mb-1">Vence el 25 de abril de 2025 23:59</p>
                 <a href="https://github.com/JuanMCastelo/UVA2TP3" target="_blank">Repositorio</a> |
-                <a href="https://JuanMCastelo.github.io/UVA2TP3" target="_blank">GitHub Page</a></p>
+                <a href="https://JuanMCastelo.github.io/UVA2TP3" target="_blank">GitHub Page</a>
               </div>
-              <div class="actividad">
-                <p><strong>Ejercicio individual: Grid y Flexbox</strong><br>
-                Vence el 25 de abril de 2025 23:59<br>
+
+              <div class="p-3 bg-white border rounded shadow-sm">
+                <p class="mb-1 fw-semibold">Ejercicio individual: Grid y Flexbox</p>
+                <p class="mb-1">Vence el 25 de abril de 2025 23:59</p>
                 <a href="https://github.com/JuanMCastelo/UVA2TP4" target="_blank">Repositorio</a> |
-                <a href="https://JuanMCastelo.github.io/UVA2TP4" target="_blank">GitHub Page</a></p>
+                <a href="https://JuanMCastelo.github.io/UVA2TP4" target="_blank">GitHub Page</a>
               </div>
-              <div class="actividad">
-                <p><strong>Ejercicio individual: Proyecto final</strong><br>
-                Vence el 25 de abril de 2025 23:59<br>
+
+              <div class="p-3 bg-white border rounded shadow-sm">
+                <p class="mb-1 fw-semibold">Ejercicio individual: Proyecto final</p>
+                <p class="mb-1">Vence el 25 de abril de 2025 23:59</p>
                 <a href="https://github.com/JuanMCastelo/UVA2TPO" target="_blank">Repositorio</a> |
-                <a href="https://JuanMCastelo.github.io/UVA2TPO" target="_blank">GitHub Page</a></p>
+                <a href="https://JuanMCastelo.github.io/UVA2TPO" target="_blank">GitHub Page</a>
               </div>
             </div>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
 
-  <footer>
-    <p>Curso: Nro curso /Profesora: Patricia Litovicius</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-light text-center py-2 border-top mt-auto">
+    <small>Curso: Nro curso / Profesora: Patricia Litovicius</small>
   </footer>
+
 </body>
 </html>
