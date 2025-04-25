@@ -135,25 +135,30 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: all 0.3s ease; /* necesario para suavizar todos los efectos */
+  transition: all 0.3s ease;
   border-left: 4px solid transparent;
 }
 
-/* Hover efecto claro y visible */
 .fechas ul li:hover,
 .bibliografia ul li:hover {
-  background-color: #dceeff; /* azul más fuerte */
-  transform: translateY(-2px); /* efecto levantar */
-  border-left: 4px solid #0073e6; /* barra azul a la izquierda */
+  background-color: #dceeff;
+  transform: translateY(-2px);
+  border-left: 4px solid #0073e6;
   cursor: pointer;
 }
 
+/* Ícono separado */
+.icono {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
 
-/* Quitar la línea del último ítem de cada lista */
+/* Quitar la línea del último ítem */
 .fechas ul li:last-child,
 .bibliografia ul li:last-child {
   border-bottom: none;
 }
+
 
   /* ============================= */
   /* Tarjetas de Actividades       */
