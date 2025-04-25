@@ -124,6 +124,23 @@
   }
   
   /* ============================= */
+/* Estilos específicos para listas en la columna izquierda */
+/* ============================= */
+.fechas ul li,
+.bibliografia ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #c5dbf0; /* azul claro más fuerte que el fondo */
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Quitar la línea del último ítem de cada lista */
+.fechas ul li:last-child,
+.bibliografia ul li:last-child {
+  border-bottom: none;
+}
+
+  /* ============================= */
   /* Tarjetas de Actividades       */
   /* ============================= */
   .actividad {
