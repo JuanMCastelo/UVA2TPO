@@ -1,26 +1,74 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 body {
-    background-color: #f8f9fa; /* gris muy claro */
-    color: #212529; /* casi negro */
+    background-color: #f8f9fa;
+    color: #212529;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #343a40; /* gris oscuro */
+    color: #343a40;
+    font-weight: 700;
 }
 
 a {
     color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
     color: #000;
+    text-decoration: underline;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .table {
     background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeIn 1s;
+}
+
+.table thead {
+    background-color: #212529;
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #dee2e6;
 }
 
 footer {
     margin-top: 50px;
+    background: linear-gradient(90deg, #343a40, #212529);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s;
 }
 
 img.perfil-img {
@@ -28,5 +76,75 @@ img.perfil-img {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #343a40;
+    border: 3px solid #343a40;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 1s;
+}
+
+img.perfil-img:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+button.btn-dark {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.btn-dark:hover {
+    background-color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.list-group-item {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeInLeft 1s;
+}
+
+.list-group-item:hover {
+    background-color: #ced4da;
+    transform: scale(1.02);
+}
+
+.container, .section, .header {
+    animation: fadeInUp 1s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .perfil-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
