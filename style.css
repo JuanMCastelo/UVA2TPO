@@ -105,7 +105,7 @@ footer {
 img.perfil-img {
     width: 100%;
     max-width: 250px;
-    height: 350px; /* Aseguramos rectángulo vertical */
+    height: 350px;
     object-fit: cover;
     border-radius: 8px;
     border: 3px solid #343a40;
@@ -124,7 +124,7 @@ img.perfil-img:hover {
 
 button.btn-dark {
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer; /* Nuevo: cambia cursor al pasar el mouse */
+    cursor: pointer;
 }
 
 button.btn-dark:hover {
@@ -217,22 +217,46 @@ button.btn-dark:hover {
 }
 
 /* ==================== */
-/* SOBRE MÍ - Ajustes personalizados */
+/* SOBRE MÍ - NUEVO DISEÑO MEJORADO */
 /* ==================== */
 
-.sobre-mi-row {
-    row-gap: 2rem;
-    column-gap: 3rem;
+.sobre-mi-seccion {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-.sobre-mi-texto {
-    margin-left: 1rem;
+.sobre-mi-box {
+    border: 1px solid #343a40;
+    border-left: 3px solid #0056b3;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin: 0 auto;
+    transition: transform 0.3s ease;
 }
 
-@media (min-width: 768px) {
-    .sobre-mi-texto {
-        margin-left: 2rem;
-    }
+.sobre-mi-box:hover {
+    transform: translateY(-3px);
+}
+
+.texto-box {
+    font-size: 1.2rem;
+    color: #212529;
+    font-weight: 400;
+}
+
+.texto-box p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+.introduccion {
+    font-weight: 500;
+}
+
+.hobbies {
+    font-weight: 600;
 }
 
 /* ==================== */
@@ -269,6 +293,17 @@ button.btn-dark:hover {
     .etiqueta-virt {
         font-size: 1rem;
         padding: 8px 16px;
+    }
+
+    .sobre-mi-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .texto-box {
+        margin-top: 1.5rem;
+        font-size: 1.05rem;
     }
 }
 
