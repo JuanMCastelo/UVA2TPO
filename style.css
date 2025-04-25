@@ -150,77 +150,77 @@ button.btn-dark:hover {
 /* ==================== */
 
 .materia-box {
-    background-color: #e9eef5;
-    border: 1px solid #ccc;
+    border: 1px solid #dee2e6; /* Borde gris claro */
     border-radius: 10px;
+    background-color: #ffffff; /* Blanco para mantener gama */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    margin-bottom: 2rem;
     overflow: hidden;
-    animation: fadeInUp 1s;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
 }
 
 .materia-box:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .materia-header {
-    background-color: #6c848e;
+    background-color: #f8f9fa;
     padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
     text-align: center;
-    color: white;
-}
-
-.materia-header h4 {
-    margin: 0;
-    font-size: 1.2rem;
 }
 
 .materia-nombre {
-    display: block;
-    background-color: #fefdd3;
-    color: #4a6b5e;
+    background-color: #f8f9fa;
+    color: #212529;
     font-weight: 600;
-    padding: 0.5rem;
-    border-top: 1px solid #ccc;
-    font-size: 1rem;
+    text-align: center;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
 }
 
 /* Caja interior */
 .materia-contenido {
-    background-color: #d8e6f2;
+    padding: 1rem;
+    background-color: #ffffff;
 }
 
 .materia-contenido .row {
     margin: 0;
 }
 
-/* Etiqueta VIRT/PRES */
 .etiqueta-virt {
     background-color: #0056b3;
     color: white;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 6px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: inline-block;
 }
 
 .horario {
-    margin-top: 10px;
+    margin-top: 8px;
     font-weight: 500;
-}
-
-/* Lista de datos */
-.materia-contenido ul li {
-    padding: 4px 0;
     font-size: 0.95rem;
 }
 
-/* Íconos */
-.materia-contenido i {
-    margin-right: 5px;
-    color: #495057;
+.materia-contenido ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
 }
+
+.materia-contenido ul li {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.materia-contenido i {
+    color: #495057;
+    margin-right: 6px;
+}
+
 
 /* ==================== */
 /* RESPONSIVE */
