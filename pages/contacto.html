@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avisos - Mi Cursada 2025</title>
+  <title>Contacto - Mi Cursada 2025</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
 
@@ -19,35 +19,35 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="avisos.html">Avisos</a></li>
+        <li class="nav-item"><a class="nav-link" href="avisos.html">Avisos</a></li>
         <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mí</a></li>
         <li class="nav-item"><a class="nav-link" href="materias2025.html">Materias 2025</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <header class="text-center py-5 bg-light">
-  <h1 class="display-4">Avisos Importantes</h1>
-  <p class="lead">Actualizaciones y noticias relevantes de la cursada.</p>
+  <h1 class="display-4">Contacto</h1>
 </header>
 
 <section class="container py-5">
-  <div class="list-group">
-    <div class="list-group-item">
-      <h5 class="mb-1">Inicio de clases</h5>
-      <p class="mb-1">Las clases comenzarán el lunes 10 de marzo de 2025.</p>
+  <form class="contact-form">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre completo</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" required>
     </div>
-    <div class="list-group-item">
-      <h5 class="mb-1">Entrega de trabajos</h5>
-      <p class="mb-1">Recordá que las entregas se realizan únicamente a través del campus virtual.</p>
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control" id="email" name="email" required>
     </div>
-    <div class="list-group-item">
-      <h5 class="mb-1">Fecha de exámenes</h5>
-      <p class="mb-1">Las fechas de exámenes finales están publicadas en cada materia.</p>
+    <div class="mb-3">
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
     </div>
-  </div>
+    <button type="submit" class="btn btn-dark">Enviar mensaje</button>
+  </form>
 </section>
 
 <footer class="bg-dark text-center text-white py-3">
