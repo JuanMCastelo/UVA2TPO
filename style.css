@@ -105,7 +105,7 @@ footer {
 img.perfil-img {
     width: 100%;
     max-width: 250px;
-    height: auto;
+    height: 350px; /* Aseguramos rectángulo vertical */
     object-fit: cover;
     border-radius: 8px;
     border: 3px solid #343a40;
@@ -124,6 +124,7 @@ img.perfil-img:hover {
 
 button.btn-dark {
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer; /* Nuevo: cambia cursor al pasar el mouse */
 }
 
 button.btn-dark:hover {
@@ -181,10 +182,6 @@ button.btn-dark:hover {
 .materia-contenido {
     padding: 1rem;
     background-color: #ffffff;
-}
-
-.materia-contenido .row {
-    margin: 0;
 }
 
 .etiqueta-virt {
