@@ -1,0 +1,32 @@
+body {
+    background-color: #f8f9fa; /* gris muy claro */
+    color: #212529; /* casi negro */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #343a40; /* gris oscuro */
+}
+
+a {
+    color: #6c757d;
+}
+
+a:hover {
+    color: #000;
+}
+
+.table {
+    background-color: #fff;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+img.perfil-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #343a40;
+}
