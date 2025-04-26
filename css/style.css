@@ -11,7 +11,8 @@ body {
     min-height: 100vh;          
   }
   main {
-    flex: 1;                     /* Expande main para empujar footer abajo */
+  /* Expande main para empujar footer abajo */
+    flex: 1;                     
   }
   
   /* ------------------------------------------------- */
@@ -23,31 +24,35 @@ body {
     background-color: #fff;             
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
     margin-bottom: 2rem;                   
-    overflow: hidden;                     
-    transition: transform 0.2s ease;      /* Animación al hover */
+    overflow: hidden; 
+    /* Animación al hover */                    
+    transition: transform 0.2s ease;       
   }
   .materia-box:hover {
-    transform: translateY(-2px);          /* Levanta bloque al pasar el cursor */
+   /* Levanta bloque al pasar el cursor */
+    transform: translateY(-2px);         
   }
   
   .materia-header {
-    background-color: #f8f9fa;            /* Gris muy claro */
-    padding: 1rem;                        /* Espaciado interno */
-    text-align: center;                   /* Centrar texto */
+    background-color: #f8f9fa; 
+    /* Espaciado interno */            
+    padding: 1rem;                         
+    text-align: center;                   
   }
   .materia-nombre {
     margin: 0;
-    font-weight: 600;                     /* Negrita ligera */
-    font-size: 1.125rem;                  /* Tamaño medio */
+    font-weight: 600;                     
+    font-size: 1.125rem;                   
   }
   
   .materia-contenido {
-    padding: 1rem;                        /* Espaciado */
+  /* Espaciado */
+    padding: 1rem;    
     background-color: #fff;
   }
   .etiqueta-virt {
     display: inline-block;
-    background-color: #0d6efd;            /* color primary */
+    background-color: #0d6efd;            
     color: #fff;
     padding: 0.5rem 0.75rem;
     border-radius: 0.25rem;
@@ -56,11 +61,11 @@ body {
   }
   .horario {
     margin-top: 0.5rem;
-    color: #6c757d;                        /* color secondary */
+    color: #6c757d;                       
     margin-bottom: 0;
   }
   .materia-contenido i {
-    color: #495057;                        /* iconos color dark */
+    color: #495057;                         
     margin-right: 0.5rem;
   }
   .materia-contenido ul {
@@ -92,20 +97,23 @@ body {
   }
   .texto-box {
     font-size: 1.2rem;
-    color: #212529;                        /* text-dark */
+    color: #212529;                                              
     line-height: 1.7;
   }
   .introduccion {
-    font-weight: 500;                      /* peso medio */
+    font-weight: 500;                                            
   }
   .hobbies {
-    font-weight: 600;                      /* negrita ligera */
+    font-weight: 600;                                              
   }
   .perfil-img {
+    /* Ancho máximo */
     width: 100%;
-    max-width: 300px;                     /* Ancho máximo */
-    border-radius: 10%;                   /* Esquinas redondeadas */
-    margin-bottom: 1rem;                  /* Separación inferior */
+    max-width: 300px;  
+    /* Esquinas redondeadas */                                            
+    border-radius: 10%;
+    /* Separación inferior */                                           
+    margin-bottom: 1rem;                                         
   }
   /* ------------------------------------------------- */
   /* Ajustes Responsivos                             */
@@ -130,18 +138,22 @@ body {
   /* Hover Tarjetas Index                             */
   /* ------------------------------------------------- */
   .card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Tarjetas index */
+  /* Tarjetas index */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;           
 }
   .card:hover {
-    transform: translateY(-5px);          /* Desplaza hacia arriba */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra más marcada */
-  }
-
+  /* Desplaza hacia arriba */
+    transform: translateY(-5px); 
+     /* Sombra más marcada */
+     box-shadow: 0 8px 16px rgba(0,0,0,0.15);                    
+   }                                    
+  
 /* ------------------------------------------------- */
 /* Hover Tarjetas Avisos                            */
 /* ------------------------------------------------- */
 .list-group-item {
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Tarjetas avisos */
+  /* Tarjetas avisos */ 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;          
   }
   .list-group-item:hover {
     transform: translateY(-5px);
@@ -151,8 +163,10 @@ body {
 /* Calendario 3+2                     */
 /* ---------------------------------- */
 #calendario-grid .cal-cell {
-    width: 220px;                      /* tu ancho fijo */
-    height: 200px;                     /* tu alto fijo */
+      /* ancho fijo */ 
+    width: 220px;  
+    /* alto fijo */                                                       
+    height: 200px;                                                                
     box-sizing: border-box;            
     padding: 1.25rem;                  
     border: 1px solid #dee2e6;         
