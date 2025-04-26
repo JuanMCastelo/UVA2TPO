@@ -147,17 +147,18 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   }
-/* ------------------------------ */
-/* Calendario 3+2                 */
-/* ------------------------------ */
+/* ---------------------------------- */
+/* Calendario 3+2                     */
+/* ---------------------------------- */
 #calendario-grid .cal-cell {
-    width: 220px;                      /* ajustá al ancho que prefieras */
-    height: 200px;                     /* ajustá al alto que prefieras */
+    width: 220px;                      /* tu ancho fijo */
+    height: 200px;                     /* tu alto fijo */
     box-sizing: border-box;            
     padding: 1.25rem;                  
     border: 1px solid #dee2e6;         
     border-radius: 0.5rem;             
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,46 +166,37 @@ body {
     font-family: inherit;
   }
   
-  /* Verde profesional para las celdas */
-  .bg-cal {
+  /* Hover: eleva y profundiza la sombra */
+  #calendario-grid .cal-cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  /* Verde profesional */
+  #calendario-grid .bg-cal {
     background-color: #198754 !important;
     color: #fff !important;
   }
   
-  /* Títulos dentro de los tiles */
+  /* Tipografía dentro */
   #calendario-grid .cal-cell strong {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-align: center;
-    color: #fff;
   }
-  
-  /* Horarios dentro de los tiles */
   #calendario-grid .cal-cell small {
     font-size: 0.95rem;
     color: rgba(255,255,255,0.8);
     text-align: center;
   }
   
-  /* (Opcional) celda vacía transparente */
+  /* Celda transparente (si la usas) */
   #calendario-grid .bg-transparent {
     background-color: transparent !important;
   }
   #calendario-grid .border-0 {
     border: none !important;
-  }
-  
-  /* ------------------------------------------------- */
-/* Hover en celdas del Calendario                  */
-/* ------------------------------------------------- */
-#calendario-grid .cal-cell {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  #calendario-grid .cal-cell:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   }
   
   /* ==================== EOF ==================== */
