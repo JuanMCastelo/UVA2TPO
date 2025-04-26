@@ -3,79 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+  <!-- Título de la página -->
   <title>Home - Mi Cursada 2025</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css\style.css">
+
+  <!-- Preconexión para acelerar la carga de recursos de jsDelivr -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Precarga de CSS de Bootstrap para mejorar rendimiento -->
+  <link 
+    rel="preload" as="style"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-…" crossorigin="anonymous"
+    onload="this.rel='stylesheet'">
+  <!-- Fallback para navegadores sin JavaScript -->
+  <noscript>
+    <link 
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-…" crossorigin="anonymous">
+  </noscript>
+
+  <!-- Bootstrap Icons: biblioteca de iconos SVG compatibles con Bootstrap -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+    rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Mi Cursada 2025</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="avisos.html">Avisos</a></li>
-        <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link" href="materias2025.html">Materias 2025</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <!-- NAVBAR: barra de navegación responsive de Bootstrap -->
+  <nav 
+    class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" 
+    aria-label="Menú principal">
+    <div class="container">
+      <!-- .container: centra y limita el ancho del contenido -->
+      <a class="navbar-brand" href="index.html">
+        <!-- .navbar-brand: estilo especial para el nombre o logo -->
+        Mi Cursada 2025
+      </a>
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Alternar navegación">
+        <!-- .navbar-toggler: botón que aparece en pantallas pequeñas -->
+        <span class="navbar-toggler-icon"></span>
+        <!-- .navbar-toggler-icon: icono estándar de hamburguesa -->
+      </button>
 
-<header class="text-center py-5 bg-light">
-  <h1 class="display-4">Bienvenido a Mi Cursada 2025</h1>
-  <p class="lead">Toda la información organizada para tu año académico</p>
-</header>
-
-<section class="container text-center py-5">
-  <h2 class="mb-4">¿Qué encontrarás en el sitio?</h2>
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <i class="bi bi-megaphone-fill display-4"></i>
-          <h5 class="card-title mt-3">
-            <a href="avisos.html" class="text-decoration-none text-dark">Avisos Importantes</a>
-          </h5>  
-          <p class="card-text">Enterate de todas las novedades y actualizaciones de la cursada.</p>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- .collapse.navbar-collapse: menú colapsable que se muestra/oculta -->
+        <ul class="navbar-nav ms-auto">
+          <!-- .navbar-nav: contenedor de enlaces
+               .ms-auto: margen izquierdo automático para empujar a la derecha -->
+          <li class="nav-item">
+            <!-- .nav-item: elemento del menú -->
+            <a class="nav-link active" aria-current="page" href="index.html">
+              <!-- .nav-link: estilo de enlace de menú
+                   .active: marca la página actual -->
+              Home
+            </a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="avisos.html">Avisos</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="materias2025.html">Materias 2025</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <i class="bi bi-book-half display-4"></i>
-          <h5 class="card-title mt-3">
-            <a href="materias2025.html" class="text-decoration-none text-dark">Materias 2025</a>
-          </h5>          
-          <p class="card-text">Revisá días, horarios, modalidad y enlaces útiles para cada materia.</p>
+  </nav>
+
+  <!-- HEADER: sección introductoria con clases de Bootstrap -->
+  <header class="text-center py-5 bg-light">
+    <h1 class="display-4">Bienvenido a Mi Cursada 2025</h1>
+    <p class="lead">Toda la información organizada para tu año académico</p>
+  </header>
+
+  <!-- MAIN: contenido principal de la página -->
+  <main id="main-content">
+    <section class="container text-center py-5" aria-labelledby="section-title">
+      <h2 id="section-title" class="mb-4">¿Qué encontrarás en el sitio?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-megaphone-fill display-4" aria-hidden="true"></i>
+              <h3 class="card-title mt-3">
+                <a href="avisos.html" class="text-decoration-none text-dark" title="Ir a avisos">
+                  Avisos Importantes
+                </a>
+              </h3>
+              <p class="card-text">Enterate de todas las novedades y actualizaciones de la cursada.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-book-half display-4" aria-hidden="true"></i>
+              <h3 class="card-title mt-3">
+                <a href="materias2025.html" class="text-decoration-none text-dark" title="Ir a materias 2025">
+                  Materias 2025
+                </a>
+              </h3>
+              <p class="card-text">Revisá días, horarios, modalidad y enlaces útiles para cada materia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-person-lines-fill display-4" aria-hidden="true"></i>
+              <h3 class="card-title mt-3">
+                <a href="sobremi.html" class="text-decoration-none text-dark" title="Conocer al autor">
+                  Sobre mí
+                </a>
+              </h3>
+              <p class="card-text">Conocé quién está detrás de este proyecto de organización académica.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100">
-        <div class="card-body">
-          <i class="bi bi-person-lines-fill display-4"></i>
-          <h5 class="card-title mt-3">
-            <a href="sobremi.html" class="text-decoration-none text-dark">Sobre mi</a>
-          </h5> 
-          <p class="card-text">Conocé quién está detrás de este proyecto de organización académica.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
 
-<footer class="bg-dark text-center text-white py-3">
-  <small>&copy; 2025 Mi Cursada. Todos los derechos reservados.</small>
-</footer>
+  <!-- FOOTER: pie de página con estilos Bootstrap -->
+  <footer class="bg-dark text-center text-white py-3">
+    <div class="container">
+      <small>&copy; 2025 Mi Cursada. Todos los derechos reservados.</small>
+    </div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script de Bootstrap para habilitar funcionalidades como el colapso del navbar -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-…" crossorigin="anonymous" defer>
+  </script>
 </body>
 </html>

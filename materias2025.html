@@ -1,161 +1,201 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon para la pestaña del navegador -->
+  <link rel="icon" href="favicon.ico">
+  <!-- Título de la página -->
   <title>Materias 2025 - Organización Cursada 2025</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css\style.css">
+
+  <!-- Preconexión y precarga de Bootstrap CSS para rendimiento -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="preload" as="style"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-…" crossorigin="anonymous"
+        onload="this.rel='stylesheet'">
+  <!-- Fallback para usuarios sin JS -->
+  <noscript>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-…" crossorigin="anonymous">
+  </noscript>
+
+  <!-- Iconos de Bootstrap (SVG font) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Link para saltar al contenido principal (accesibilidad) -->
+  <a href="#main-content" class="visually-hidden-focusable">Saltar al contenido</a>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Mi Cursada 2025</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="avisos.html">Avisos</a></li>
-        <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link active" href="materias2025.html">Materias 2025</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <!-- Navbar: barra de navegación con collapse en móviles -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" aria-label="Menú principal">
+    <div class="container">
+      <!-- Marca/Logo -->
+      <a class="navbar-brand" href="index.html">Mi Cursada 2025</a>
+      <!-- Botón hamburguesa para colapsar menú en pantallas pequeñas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<header class="text-center py-5 bg-light">
-  <h1 class="display-4">Materias 2025</h1>
-  <h4>Cursada virtual - 1.er cuatrimestre de 2025</h4>
-</header>
-
-<section class="container py-5">
-
-  <!-- Materia 1 -->
-  <div class="materia-box mb-4">
-    <div class="materia-header">
-      <span class="materia-nombre">LIDERAZGO Y NEGOCIACIÓN</span>
-    </div>
-    <div class="materia-contenido">
-      <div class="row align-items-center p-3">
-        <div class="col-md-2 text-center">
-          <div class="etiqueta-virt">VIRT</div>
-          <p class="horario">18:30hs - 22:30hs</p>
-        </div>
-        <div class="col-md-10">
-          <ul class="list-unstyled mb-0">
-            <li><i class="bi bi-people-fill"></i> 37 alumnos</li>
-            <li><i class="bi bi-geo-alt-fill"></i> Aula: UADE Virtual</li>
-            <li><i class="bi bi-123"></i> Curso: 515380 / Clase: 10960</li>
-            <li><i class="bi bi-calendar-range"></i> 10/03/2025 - 12/07/2025</li>
-            <li><i class="bi bi-check-square"></i> Examen Final: <strong>21/07/2025</strong></li>
-          </ul>
-        </div>
+      <!-- Lista de enlaces de navegación colapsable -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- .ms-auto empuja la lista a la derecha -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="avisos.html">Avisos</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="materias2025.html">Materias 2025</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <!-- Materia 2 -->
-  <div class="materia-box mb-4">
-    <div class="materia-header">
-      <span class="materia-nombre">SISTEMAS DE INFORMACIÓN 1</span>
-    </div>
-    <div class="materia-contenido">
-      <div class="row align-items-center p-3">
-        <div class="col-md-2 text-center">
-          <div class="etiqueta-virt">VIRT</div>
-          <p class="horario">Martes 18:30 - 20:30</p>
-        </div>
-        <div class="col-md-10">
-          <ul class="list-unstyled mb-0">
-            <li><i class="bi bi-geo-alt-fill"></i> Aula: UADE Virtual</li>
-            <li><i class="bi bi-calendar-range"></i> 12/03/2025 - 02/07/2025</li>
-            <li><i class="bi bi-check-square"></i> Examen Final: <strong>22/07/2025</strong></li>
-          </ul>
+  <!-- Header: título y subtítulo de la sección -->
+  <header class="text-center py-5 bg-light">
+    <!-- .text-center centra el texto, .py-5 aplica padding vertical -->
+    <h1 class="display-4">Materias 2025</h1>
+    <h4>Cursada virtual - 1.er cuatrimestre de 2025</h4>
+  </header>
+
+  <!-- Contenido principal de materias -->
+  <main id="main-content" class="container py-5">
+    <!-- Cada materia se presenta en un bloque '.materia-box' -->
+
+    <!-- Materia 1: Liderazgo y Negociación -->
+    <article class="materia-box mb-4">
+      <header class="materia-header p-3 bg-secondary text-white rounded-top">
+        <!-- Nombre de la materia -->
+        <h2 class="materia-nombre mb-0">LIDERAZGO Y NEGOCIACIÓN</h2>
+      </header>
+      <div class="materia-contenido border rounded-bottom">
+        <!-- .row y .align-items-center organizan grid y centran verticalmente -->
+        <div class="row align-items-center p-3">
+          <!-- Columna de etiqueta y horario -->
+          <div class="col-md-2 text-center">
+            <span class="badge bg-primary etiqueta-virt">VIRT</span>
+            <!-- .badge + bg-primary para destacar etiqueta -->
+            <p class="horario mt-2 mb-0">18:30hs - 22:30hs</p>
+          </div>
+          <!-- Columna de detalles de la materia -->
+          <div class="col-md-10">
+            <ul class="list-unstyled mb-0">
+              <!-- Íconos de Bootstrap Icons para visual cues -->
+              <li><i class="bi bi-geo-alt-fill me-2"></i>Aula: UADE Virtual</li>
+              <li><i class="bi bi-123 me-2"></i>Curso: 515380 / Clase: 10960</li>
+              <li><i class="bi bi-calendar-range me-2"></i>10/03/2025 - 12/07/2025</li>
+              <li><i class="bi bi-check-square me-2"></i>Examen Final: <strong>21/07/2025</strong></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
 
-  <!-- Materia 3 -->
-  <div class="materia-box mb-4">
-    <div class="materia-header">
-      <span class="materia-nombre">ARQUITECTURA DE COMPUTADORES</span>
-    </div>
-    <div class="materia-contenido">
-      <div class="row align-items-center p-3">
-        <div class="col-md-2 text-center">
-          <div class="etiqueta-virt">VIRT</div>
-          <p class="horario">Miércoles 18:30 - 20:30</p>
-        </div>
-        <div class="col-md-10">
-          <ul class="list-unstyled mb-0">
-            <li><i class="bi bi-geo-alt-fill"></i> Aula: UADE Virtual</li>
-            <li><i class="bi bi-calendar-range"></i> 13/03/2025 - 03/07/2025</li>
-            <li><i class="bi bi-check-square"></i> Examen Final: <strong>23/07/2025</strong></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Materia 4 -->
-  <div class="materia-box mb-4">
-    <div class="materia-header">
-      <span class="materia-nombre">MARKETING</span>
-    </div>
-    <div class="materia-contenido">
-      <div class="row align-items-center p-3">
-        <div class="col-md-2 text-center">
-          <div class="etiqueta-virt">VIRT</div>
-          <p class="horario">Jueves 18:30 - 20:30</p>
-        </div>
-        <div class="col-md-10">
-          <ul class="list-unstyled mb-0">
-            <li><i class="bi bi-geo-alt-fill"></i> Aula: 102 - Edificio Lima</li>
-            <li><i class="bi bi-calendar-range"></i> 14/03/2025 - 04/07/2025</li>
-            <li><i class="bi bi-check-square"></i> Examen Final: <strong>24/07/2025</strong></li>
-          </ul>
+    <!-- Repetir estructura para cada materia -->
+    <article class="materia-box mb-4">
+      <header class="materia-header p-3 bg-secondary text-white rounded-top">
+        <h2 class="materia-nombre mb-0">SISTEMAS DE INFORMACIÓN 1</h2>
+      </header>
+      <div class="materia-contenido border rounded-bottom">
+        <div class="row align-items-center p-3">
+          <div class="col-md-2 text-center">
+            <span class="badge bg-primary etiqueta-virt">VIRT</span>
+            <p class="horario mt-2 mb-0">Martes 18:30 - 20:30</p>
+          </div>
+          <div class="col-md-10">
+            <ul class="list-unstyled mb-0">
+              <li><i class="bi bi-geo-alt-fill me-2"></i>Aula: UADE Virtual</li>
+              <li><i class="bi bi-calendar-range me-2"></i>12/03/2025 - 02/07/2025</li>
+              <li><i class="bi bi-check-square me-2"></i>Examen Final: <strong>22/07/2025</strong></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
 
-  <!-- Materia 5 -->
-  <div class="materia-box mb-4">
-    <div class="materia-header">
-      <span class="materia-nombre">DISEÑO Y DESARROLLO WEB</span>
-    </div>
-    <div class="materia-contenido">
-      <div class="row align-items-center p-3">
-        <div class="col-md-2 text-center">
-          <div class="etiqueta-virt">VIRT</div>
-          <p class="horario">Viernes 18:30 - 20:30</p>
-        </div>
-        <div class="col-md-10">
-          <ul class="list-unstyled mb-0">
-            <li><i class="bi bi-geo-alt-fill"></i> Aula: UADE Virtual</li>
-            <li><i class="bi bi-calendar-range"></i> 15/03/2025 - 05/07/2025</li>
-            <li><i class="bi bi-check-square"></i> Examen Final: <strong>25/07/2025</strong></li>
-            <li><strong>Enlaces:</strong> 
-              <a href="disenoweb.html">Página desplegada</a>
-            </li>
-          </ul>
+    <article class="materia-box mb-4">
+      <header class="materia-header p-3 bg-secondary text-white rounded-top">
+        <h2 class="materia-nombre mb-0">ARQUITECTURA DE COMPUTADORES</h2>
+      </header>
+      <div class="materia-contenido border rounded-bottom">
+        <div class="row align-items-center p-3">
+          <div class="col-md-2 text-center">
+            <span class="badge bg-primary etiqueta-virt">VIRT</span>
+            <p class="horario mt-2 mb-0">Miércoles 18:30 - 20:30</p>
+          </div>
+          <div class="col-md-10">
+            <ul class="list-unstyled mb-0">
+              <li><i class="bi bi-geo-alt-fill me-2"></i>Aula: UADE Virtual</li>
+              <li><i class="bi bi-calendar-range me-2"></i>13/03/2025 - 03/07/2025</li>
+              <li><i class="bi bi-check-square me-2"></i>Examen Final: <strong>23/07/2025</strong></li>
+            </ul>
+          </div>
         </div>
       </div>
+    </article>
+
+    <article class="materia-box mb-4">
+      <header class="materia-header p-3 bg-secondary text-white rounded-top">
+        <h2 class="materia-nombre mb-0">MARKETING</h2>
+      </header>
+      <div class="materia-contenido border rounded-bottom">
+        <div class="row align-items-center p-3">
+          <div class="col-md-2 text-center">
+            <span class="badge bg-primary etiqueta-virt">VIRT</span>
+            <p class="horario mt-2 mb-0">Jueves 18:30 - 20:30</p>
+          </div>
+          <div class="col-md-10">
+            <ul class="list-unstyled mb-0">
+              <li><i class="bi bi-geo-alt-fill me-2"></i>Aula: UADE Virtual</li>
+              <li><i class="bi bi-calendar-range me-2"></i>14/03/2025 - 04/07/2025</li>
+              <li><i class="bi bi-check-square me-2"></i>Examen Final: <strong>24/07/2025</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="materia-box mb-4">
+      <header class="materia-header p-3 bg-secondary text-white rounded-top">
+        <h2 class="materia-nombre mb-0">DISEÑO Y DESARROLLO WEB</h2>
+      </header>
+      <div class="materia-contenido border rounded-bottom">
+        <div class="row align-items-center p-3">
+          <div class="col-md-2 text-center">
+            <span class="badge bg-primary etiqueta-virt">VIRT</span>
+            <p class="horario mt-2 mb-0">Viernes 18:30 - 20:30</p>
+          </div>
+          <div class="col-md-10">
+            <ul class="list-unstyled mb-0">
+              <li><i class="bi bi-geo-alt-fill me-2"></i>Aula: UADE Virtual</li>
+              <li><i class="bi bi-calendar-range me-2"></i>15/03/2025 - 05/07/2025</li>
+              <li><i class="bi bi-check-square me-2"></i>Examen Final: <strong>25/07/2025</strong></li>
+              <li><strong>Enlaces:</strong> <a href="disenoweb.html" class="text-decoration-none">Página desplegada</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer: pie de página coherente con resto del sitio -->
+  <footer class="bg-dark text-center text-white py-3">
+    <div class="container">
+      <small>&copy; 2025 Mi Cursada. Todos los derechos reservados.</small>
     </div>
-  </div>
+  </footer>
 
-</section>
-
-<footer class="bg-dark text-center text-white py-3">
-  <small>&copy; 2025 Mi Cursada. Todos los derechos reservados.</small>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script de Bootstrap para funcionalidades JS (collapse, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-…" crossorigin="anonymous" defer></script>
 </body>
 </html>

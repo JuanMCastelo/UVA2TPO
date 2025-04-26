@@ -1,340 +1,152 @@
-/* Importar animaciones de Animate.css */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+/* ================================================= */
+/* style.css – Estilos personalizados Mi Cursada 2025   */
+/* ================================================= */
 
-/* ==================== */
-/* ESTILOS GENERALES */
-/* ==================== */
-
-html, body {
-    height: 100%;
-}
-
+/* ------------------------------------------------- */
+/* Layout general y sticky footer                  */
+/* ------------------------------------------------- */
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: #f8f9fa;
-    color: #212529;
-    font-family: 'Roboto', sans-serif;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.page-wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #343a40;
-    font-weight: 700;
-}
-
-a {
-    color: #6c757d;
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-a:hover {
-    color: #000;
-    text-decoration: underline;
-}
-
-/* ==================== */
-/* BARRA DE NAVEGACIÓN */
-/* ==================== */
-
-.navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.nav-link {
-    position: relative;
-    transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
-    display: block;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transition: width 0.3s;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* ==================== */
-/* TABLAS */
-/* ==================== */
-
-.table {
+    display: flex;                
+    flex-direction: column;       
+    min-height: 100vh;          
+  }
+  main {
+    flex: 1;                     /* Expande main para empujar footer abajo */
+  }
+  
+  /* ------------------------------------------------- */
+  /* Bloques de Materia                               */
+  /* ------------------------------------------------- */
+  .materia-box {
+    border: 1px solid #dee2e6;          
+    border-radius: 0.5rem;               
+    background-color: #fff;             
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    margin-bottom: 2rem;                   
+    overflow: hidden;                     
+    transition: transform 0.2s ease;      /* Animación al hover */
+  }
+  .materia-box:hover {
+    transform: translateY(-2px);          /* Levanta bloque al pasar el cursor */
+  }
+  
+  .materia-header {
+    background-color: #f8f9fa;            /* Gris muy claro */
+    padding: 1rem;                        /* Espaciado interno */
+    text-align: center;                   /* Centrar texto */
+  }
+  .materia-nombre {
+    margin: 0;
+    font-weight: 600;                     /* Negrita ligera */
+    font-size: 1.125rem;                  /* Tamaño medio */
+  }
+  
+  .materia-contenido {
+    padding: 1rem;                        /* Espaciado */
     background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    animation: fadeIn 1s;
-}
-
-.table thead {
-    background-color: #212529;
-    color: white;
-}
-
-.table-hover tbody tr:hover {
-    background-color: #dee2e6;
-}
-
-/* ==================== */
-/* FOOTER */
-/* ==================== */
-
-footer {
-    background: linear-gradient(90deg, #343a40, #212529);
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    animation: fadeInUp 1s;
-    padding: 1rem 0;
-    margin-top: auto;
-}
-
-/* ==================== */
-/* IMÁGENES */
-/* ==================== */
-
-img.perfil-img {
-    width: 100%;
-    max-width: 250px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid #343a40;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: zoomIn 1s;
-}
-
-img.perfil-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-/* ==================== */
-/* BOTONES */
-/* ==================== */
-
-button.btn-dark {
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-}
-
-button.btn-dark:hover {
-    background-color: #000;
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* ==================== */
-/* LISTAS */
-/* ==================== */
-
-.list-group-item {
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    animation: fadeInLeft 1s;
-}
-
-.list-group-item:hover {
-    background-color: #ced4da;
-    transform: scale(1.02);
-}
-
-/* ==================== */
-/* MATERIA BOXES */
-/* ==================== */
-
-.materia-box {
-    border: 1px solid #dee2e6;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    margin-bottom: 2rem;
-    overflow: hidden;
-    transition: transform 0.2s ease;
-}
-
-.materia-box:hover {
-    transform: translateY(-2px);
-}
-
-.materia-header {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    text-align: center;
-}
-
-.materia-nombre {
-    background-color: #f8f9fa;
-    color: #212529;
-    font-weight: 600;
-    text-align: center;
-    padding: 0.75rem;
-}
-
-.materia-contenido {
-    padding: 1rem;
-    background-color: #ffffff;
-}
-
-.etiqueta-virt {
-    background-color: #0056b3;
-    color: white;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 1.1rem;
+  }
+  .etiqueta-virt {
     display: inline-block;
-}
-
-.horario {
-    margin-top: 8px;
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-.materia-contenido ul {
+    background-color: #0d6efd;            /* color primary */
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .horario {
+    margin-top: 0.5rem;
+    color: #6c757d;                        /* color secondary */
+    margin-bottom: 0;
+  }
+  .materia-contenido i {
+    color: #495057;                        /* iconos color dark */
+    margin-right: 0.5rem;
+  }
+  .materia-contenido ul {
     padding-left: 0;
     list-style: none;
     margin-bottom: 0;
-}
-
-.materia-contenido ul li {
+  }
+  .materia-contenido ul li {
+    margin-bottom: 0.5rem;
     font-size: 0.95rem;
-    margin-bottom: 6px;
-}
-
-.materia-contenido i {
-    color: #495057;
-    margin-right: 6px;
-}
-
-/* ==================== */
-/* SOBRE MÍ - NUEVO DISEÑO MEJORADO */
-/* ==================== */
-
-.sobre-mi-seccion {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-.sobre-mi-box {
-    border: 1px solid #343a40;
-    border-left: 3px solid #0056b3;
-    border-radius: 8px;
-    background-color: #ffffff;
+  }
+  
+  /* ------------------------------------------------- */
+  /* Sección “Sobre mí”                               */
+  /* ------------------------------------------------- */
+  .sobre-mi-seccion {
+    padding: 3rem 0;                        
+  }
+  .sobre-mi-box {
+    border: 1px solid #343a40;             
+    border-radius: 0.5rem;
+    background-color: #fff;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    margin: 0 auto;
     transition: transform 0.3s ease;
-}
-
-.sobre-mi-box:hover {
+  }
+  .sobre-mi-box:hover {
     transform: translateY(-3px);
-}
-
-.texto-box {
+  }
+  .texto-box {
     font-size: 1.2rem;
-    color: #212529;
-    font-weight: 400;
-}
-
-.texto-box p {
-    margin-bottom: 1.2rem;
+    color: #212529;                        /* text-dark */
     line-height: 1.7;
-}
-
-.introduccion {
-    font-weight: 500;
-}
-
-.hobbies {
-    font-weight: 600;
-}
-
-/* ==================== */
-/* RESPONSIVE */
-/* ==================== */
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+  }
+  .introduccion {
+    font-weight: 500;                      /* peso medio */
+  }
+  .hobbies {
+    font-weight: 600;                      /* negrita ligera */
+  }
+  .perfil-img {
+    width: 100%;
+    max-width: 300px;                     /* Ancho máximo */
+    border-radius: 10%;                   /* Esquinas redondeadas */
+    margin-bottom: 1rem;                  /* Separación inferior */
+  }
+  /* ------------------------------------------------- */
+  /* Ajustes Responsivos                             */
+  /* ------------------------------------------------- */
+  @media (max-width: 768px) {
+    .materia-nombre {
+      font-size: 1rem;
     }
-
-    h2 {
-        font-size: 1.75rem;
-    }
-
-    .perfil-img {
-        width: 150px;
-        height: auto;
-    }
-
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-
-    .nav-link {
-        font-size: 0.95rem;
-        text-align: center;
-    }
-
-    footer {
-        font-size: 0.8rem;
-    }
-
     .etiqueta-virt {
-        font-size: 1rem;
-        padding: 8px 16px;
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
     }
-
     .sobre-mi-box {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem;
+      padding: 1.5rem;
     }
-
     .texto-box {
-        margin-top: 1.5rem;
-        font-size: 1.05rem;
+      font-size: 1.05rem;
     }
+  }
+  
+  /* ------------------------------------------------- */
+  /* Hover Tarjetas Index                             */
+  /* ------------------------------------------------- */
+  .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Tarjetas index */
 }
+  .card:hover {
+    transform: translateY(-5px);          /* Desplaza hacia arriba */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra más marcada */
+  }
 
-/* ==================== */
-/* ANIMACIONES PERSONALIZADAS */
-/* ==================== */
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* ------------------------------------------------- */
+/* Hover Tarjetas Avisos                            */
+/* ------------------------------------------------- */
+.list-group-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Tarjetas avisos */
+  }
+  .list-group-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  /* ==================== EOF ==================== */
+  
+  
