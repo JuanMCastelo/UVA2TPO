@@ -2,257 +2,188 @@
 /* Reset básico                  */
 /* ============================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  ul, ol {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #333333;
-  }
-  
-  /* ============================= */
-  /* Navbar                        */
-  /* ============================= */
-  .navbar {
-    background: #003366;
-    padding: 15px 20px;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .brand {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 25px;
-  }
-  
-  .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-  }
-  
-  .nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #0073e6;
-    bottom: -4px;
-    left: 0;
-    transition: width 0.3s;
-  }
-  
-  .nav-links a:hover::after {
-    width: 100%;
-  }
-  
-  /* ============================= */
-  /* Main                          */
-  /* ============================= */
-  main {
-    flex: 1;
-    padding-bottom: 20px;
-  }
-  
-  main h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2rem;
-    color: #003366;
-  }
-  
-  /* ============================= */
-  /* Contenedor Principal          */
-  /* ============================= */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, ol {
+  list-style: none;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333333;
+}
+
+/* ============================= */
+/* Main                          */
+/* ============================= */
+main {
+  flex: 1;
+  padding-bottom: 20px;
+}
+main h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #003366;
+}
+
+/* ============================= */
+/* Contenedor Principal          */
+/* ============================= */
+.contenedor-principal {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* ============================= */
+/* Columnas                      */
+/* ============================= */
+.izquierda {
+  flex: 1;
+  max-width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.derecha {
+  flex: 2;
+  max-width: 66.66%;
+}
+.fechas, .bibliografia, .actividades {
+  background: #f5f7fa;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+}
+
+/* ============================= */
+/* Listas de la izquierda        */
+/* ============================= */
+.fechas ul li,
+.bibliografia ul li {
+  padding: 12px 8px;
+  border-bottom: 1px solid #c5dbf0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+.fechas ul li:hover,
+.bibliografia ul li:hover {
+  background-color: #dceeff;
+  transform: translateY(-2px);
+  border-left: 4px solid #0073e6;
+  cursor: pointer;
+}
+.fechas ul li:last-child,
+.bibliografia ul li:last-child {
+  border-bottom: none;
+}
+.icono {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+/* ============================= */
+/* Tarjetas de Actividades       */
+/* ============================= */
+.actividad {
+  background: #ffffff;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.actividad:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  background: #f0f8ff;
+}
+.contenido-actividad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.titulo {
+  font-weight: bold;
+  color: #003366;
+}
+.vencimiento {
+  font-size: 0.9rem;
+  color: #555555;
+}
+.enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.btn {
+  background: #0073e6;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #005bb5;
+}
+
+/* ============================= */
+/* Footer                        */
+/* ============================= */
+footer {
+  background: #003366;
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+}
+
+/* ============================= */
+/* Navbar – solo override color */
+/* ============================= */
+.navbar {
+  background-color: #0d6efd !important;  
+}
+
+/* ============================= */
+/* Responsive (<768px)           */
+/* ============================= */
+@media (max-width: 768px) {
+  /* Apila columnas en vertical */
   .contenedor-principal {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    padding: 20px;
-    gap: 20px;
-  }
-  
-  /* ============================= */
-  /* Columnas                      */
-  /* ============================= */
-  .izquierda {
-    flex: 1;
-    max-width: 33.33%;
-    display: flex;
     flex-direction: column;
-    gap: 20px;
   }
-  
+  /* Secciones toman 100% de ancho */
+  .izquierda,
   .derecha {
-    flex: 2;
-    max-width: 66.66%;
+    max-width: 100%;
   }
-  
-  .fechas, .bibliografia, .actividades {
-    background: #f5f7fa;
-    padding: 20px;
-    border: 1px solid #dadde1;
-    border-radius: 12px;
+  /* Ajuste de tamaño de título */
+  main h1 {
+    font-size: 1.6rem;
   }
-  
-  /* ============================= */
-  /* Listas específicas de la izquierda */
-  /* ============================= */
-  .fechas ul li,
-  .bibliografia ul li {
-    padding: 12px 8px;
-    border-bottom: 1px solid #c5dbf0;
-    line-height: 1.8;
-    font-size: 1.05rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    border-left: 4px solid transparent;
-  }
-  
-  .fechas ul li:hover,
-  .bibliografia ul li:hover {
-    background-color: #dceeff;
-    transform: translateY(-2px);
-    border-left: 4px solid #0073e6;
-    cursor: pointer;
-  }
-  
-  .fechas ul li:last-child,
-  .bibliografia ul li:last-child {
-    border-bottom: none;
-  }
-  
-  .icono {
-    flex-shrink: 0;
-    font-size: 1.2rem;
-  }
-  
-  /* ============================= */
-  /* Tarjetas de Actividades       */
-  /* ============================= */
-  .actividad {
-    background: #ffffff;
-    border: 1px solid #dadde1;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 15px;
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  
-  .actividad:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transform: translateY(-5px);
-    background: #f0f8ff;
-  }
-  
-  .contenido-actividad {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .titulo {
-    font-weight: bold;
-    color: #003366;
-  }
-  
-  .vencimiento {
-    font-size: 0.9rem;
-    color: #555555;
-  }
-  
-  .enlaces {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .btn {
-    background: #0073e6;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    text-align: center;
-    transition: background 0.3s ease;
-  }
-  
-  .btn:hover {
-    background: #005bb5;
-  }
-  
-  /* ============================= */
-  /* Footer                        */
-  /* ============================= */
-  footer {
-    background: #003366;
-    text-align: center;
-    padding: 10px;
-    color: #ffffff;
-  }
-  
-  /* ============================= */
-  /* Responsive                    */
-  /* ============================= */
-  @media (max-width: 768px) {
-    .contenedor-principal {
-      flex-direction: column;
-    }
-  
-    .izquierda, .derecha {
-      max-width: 100%;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-  
-    .brand {
-      font-size: 1.3rem;
-    }
-  
-    main h1 {
-      font-size: 1.6rem;
-    }
-  }
-  
+}
