@@ -1,218 +1,253 @@
+/* -------------------------------------------------
+   Theme variables for light & dark mode
+   ------------------------------------------------- */
+:root {
+  --bg-page:       #ffffff;
+  --text-page:     #212529;
+  --bg-nav:        #343a40;
+  --text-nav:      #ffffff;
+  --bg-card:       #ffffff;
+  --bg-section:    #f8f9fa;
+  --border-color:  #dee2e6;
+  --text-muted:    #6c757d;
+  --bg-form:       #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-page:       #121212;
+  --text-page:     #e4e4e4;
+  --bg-nav:        #1f1f1f;
+  --text-nav:      #cccccc;
+  --bg-card:       #1f1f1f;
+  --bg-section:    #2a2a2a;
+  --border-color:  #444;
+  --text-muted:    #aaaaaa;
+  --bg-form:       #2a2a2a;
+}
+
+/* -------------------------------------------------
+   Global application of theme variables
+   ------------------------------------------------- */
+body {
+  background-color: var(--bg-page);
+  color:            var(--text-page);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+
+.navbar {
+  background-color: var(--bg-nav) !important;
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: var(--text-nav) !important;
+}
+footer {
+  background-color: var(--bg-nav);
+  color:            var(--text-nav);
+}
+
 /* ================================================= */
-/* style.css – Estilos personalizados Mi Cursada 2025   */
+/* style.css – Estilos personalizados Mi Cursada 2025 */
 /* ================================================= */
 
 /* ------------------------------------------------- */
-/* Layout general y sticky footer                  */
+/* Bloques de Materia                               */
 /* ------------------------------------------------- */
-body {
-    display: flex;                
-    flex-direction: column;       
-    min-height: 100vh;          
-  }
-  main {
-  /* Expande main para empujar footer abajo */
-    flex: 1;                     
-  }
-  
-  /* ------------------------------------------------- */
-  /* Bloques de Materia                               */
-  /* ------------------------------------------------- */
-  .materia-box {
-    border: 1px solid #dee2e6;          
-    border-radius: 0.5rem;               
-    background-color: #fff;             
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-    margin-bottom: 2rem;                   
-    overflow: hidden; 
-    /* Animación al hover */                    
-    transition: transform 0.2s ease;       
-  }
-  .materia-box:hover {
-   /* Levanta bloque al pasar el cursor */
-    transform: translateY(-2px);         
-  }
-  
-  .materia-header {
-    background-color: #f8f9fa; 
-    /* Espaciado interno */            
-    padding: 1rem;                         
-    text-align: center;                   
-  }
+.materia-box {
+  border:         1px solid var(--border-color);
+  border-radius:  0.5rem;
+  background-color: var(--bg-card);
+  box-shadow:     0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom:  2rem;
+  overflow:       hidden;
+  transition:     transform 0.2s ease;
+}
+.materia-box:hover {
+  transform: translateY(-2px);
+}
+
+.materia-header {
+  background-color: var(--bg-section);
+  padding:          1rem;
+  text-align:       center;
+}
+.materia-nombre {
+  margin:      0;
+  font-weight: 600;
+  font-size:   1.125rem;
+}
+
+.materia-contenido {
+  padding:           1rem;
+  background-color:  var(--bg-card);
+}
+.etiqueta-virt {
+  display: inline-block;
+  background-color: #0d6efd;
+  color:            #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  font-size:   1.1rem;
+}
+.horario {
+  margin-top:    0.5rem;
+  color:         var(--text-muted);
+  margin-bottom: 0;
+}
+.materia-contenido i {
+  color:       #495057;
+  margin-right: 0.5rem;
+}
+.materia-contenido ul {
+  padding-left: 0;
+  list-style:   none;
+  margin-bottom: 0;
+}
+.materia-contenido ul li {
+  margin-bottom: 0.5rem;
+  font-size:     0.95rem;
+}
+
+/* ------------------------------------------------- */
+/* Sección “Sobre mí”                               */
+/* ------------------------------------------------- */
+.sobre-mi-seccion {
+  padding: 3rem 0;
+}
+.sobre-mi-box {
+  border:          1px solid var(--border-color);
+  border-radius:   0.5rem;
+  background-color: var(--bg-card);
+  padding:         2rem;
+  box-shadow:      0 4px 8px rgba(0,0,0,0.05);
+  transition:      transform 0.3s ease;
+}
+.sobre-mi-box:hover {
+  transform: translateY(-3px);
+}
+.texto-box {
+  font-size:  1.2rem;
+  color:      var(--text-page);
+  line-height: 1.7;
+}
+.introduccion {
+  font-weight: 500;
+}
+.hobbies {
+  font-weight: 600;
+}
+.perfil-img {
+  width:         100%;
+  max-width:     300px;
+  border-radius: 10%;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------------------- */
+/* Ajustes Responsivos                             */
+/* ------------------------------------------------- */
+@media (max-width: 768px) {
   .materia-nombre {
-    margin: 0;
-    font-weight: 600;                     
-    font-size: 1.125rem;                   
-  }
-  
-  .materia-contenido {
-  /* Espaciado */
-    padding: 1rem;    
-    background-color: #fff;
+    font-size: 1rem;
   }
   .etiqueta-virt {
-    display: inline-block;
-    background-color: #0d6efd;            
-    color: #fff;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.25rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  .horario {
-    margin-top: 0.5rem;
-    color: #6c757d;                       
-    margin-bottom: 0;
-  }
-  .materia-contenido i {
-    color: #495057;                         
-    margin-right: 0.5rem;
-  }
-  .materia-contenido ul {
-    padding-left: 0;
-    list-style: none;
-    margin-bottom: 0;
-  }
-  .materia-contenido ul li {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-  }
-  
-  /* ------------------------------------------------- */
-  /* Sección “Sobre mí”                               */
-  /* ------------------------------------------------- */
-  .sobre-mi-seccion {
-    padding: 3rem 0;                        
+    font-size: 1rem;
+    padding:   0.5rem 0.75rem;
   }
   .sobre-mi-box {
-    border: 1px solid #343a40;             
-    border-radius: 0.5rem;
-    background-color: #fff;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-  }
-  .sobre-mi-box:hover {
-    transform: translateY(-3px);
+    padding: 1.5rem;
   }
   .texto-box {
-    font-size: 1.2rem;
-    color: #212529;                                              
-    line-height: 1.7;
+    font-size: 1.05rem;
   }
-  .introduccion {
-    font-weight: 500;                                            
-  }
-  .hobbies {
-    font-weight: 600;                                              
-  }
-  .perfil-img {
-    /* Ancho máximo */
-    width: 100%;
-    max-width: 300px;  
-    /* Esquinas redondeadas */                                            
-    border-radius: 10%;
-    /* Separación inferior */                                           
-    margin-bottom: 1rem;                                         
-  }
-  /* ------------------------------------------------- */
-  /* Ajustes Responsivos                             */
-  /* ------------------------------------------------- */
-  @media (max-width: 768px) {
-    .materia-nombre {
-      font-size: 1rem;
-    }
-    .etiqueta-virt {
-      font-size: 1rem;
-      padding: 0.5rem 0.75rem;
-    }
-    .sobre-mi-box {
-      padding: 1.5rem;
-    }
-    .texto-box {
-      font-size: 1.05rem;
-    }
-  }
-  
-  /* ------------------------------------------------- */
-  /* Hover Tarjetas Index                             */
-  /* ------------------------------------------------- */
-  .card {
-  /* Tarjetas index */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;           
 }
-  .card:hover {
-  /* Desplaza hacia arriba */
-    transform: translateY(-5px); 
-     /* Sombra más marcada */
-     box-shadow: 0 8px 16px rgba(0,0,0,0.15);                    
-   }                                    
-  
+
+/* ------------------------------------------------- */
+/* Hover Tarjetas Index                             */
+/* ------------------------------------------------- */
+.card {
+  background-color: var(--bg-card);
+  border-color:     var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
 /* ------------------------------------------------- */
 /* Hover Tarjetas Avisos                            */
 /* ------------------------------------------------- */
 .list-group-item {
-  /* Tarjetas avisos */ 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;          
-  }
-  .list-group-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  }
+  background-color: var(--bg-card);
+  border-color:     var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.list-group-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
 /* ---------------------------------- */
 /* Calendario 3+2                     */
 /* ---------------------------------- */
 #calendario-grid .cal-cell {
-      /* ancho fijo */ 
-    width: 220px;  
-    /* alto fijo */                                                       
-    height: 200px;                                                                
-    box-sizing: border-box;            
-    padding: 1.25rem;                  
-    border: 1px solid #dee2e6;         
-    border-radius: 0.5rem;             
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: inherit;
-  }
-  
-  /* Hover: eleva y profundiza la sombra */
-  #calendario-grid .cal-cell:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  }
-  
-  /* Verde profesional */
-  #calendario-grid .bg-cal {
-    background-color: #198754 !important;
-    color: #fff !important;
-  }
-  
-  /* Tipografía dentro */
-  #calendario-grid .cal-cell strong {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-  #calendario-grid .cal-cell small {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.8);
-    text-align: center;
-  }
-  
-  /* Celda transparente (si la usas) */
-  #calendario-grid .bg-transparent {
-    background-color: transparent !important;
-  }
-  #calendario-grid .border-0 {
-    border: none !important;
-  }
-  
-  /* ==================== EOF ==================== */
-  
-  
+  width:            220px;
+  height:           200px;
+  box-sizing:       border-box;
+  padding:          1.25rem;
+  border:           1px solid var(--border-color);
+  border-radius:    0.5rem;
+  background-color: var(--bg-card);
+  box-shadow:       0 2px 5px rgba(0,0,0,0.05);
+  transition:       transform 0.2s ease, box-shadow 0.2s ease;
+  display:          flex;
+  flex-direction:   column;
+  justify-content:  center;
+  align-items:      center;
+  font-family:      inherit;
+}
+#calendario-grid .cal-cell:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+#calendario-grid .bg-cal {
+  background-color: #198754 !important;
+  color:            #fff !important;
+}
+#calendario-grid .cal-cell strong {
+  font-size:   1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align:   center;
+}
+#calendario-grid .cal-cell small {
+  font-size: 0.95rem;
+  color:     rgba(255,255,255,0.8);
+  text-align: center;
+}
+#calendario-grid .bg-transparent {
+  background-color: transparent !important;
+}
+#calendario-grid .border-0 {
+  border: none !important;
+}
+
+/* Forzar uso de variables en textos */
+h1,h2,h3,h4,h5,h6,
+p,a,li,span,label,
+.text-dark, .lead {
+  color: var(--text-page) !important;
+}
+
+/* Sobrescribir fondos Bootstrap */
+.bg-light { background-color: var(--bg-section) !important; }
+.bg-white { background-color: var(--bg-page)    !important; }
+.bg-dark  { background-color: var(--bg-nav)     !important; }
+/* ==================== EOF ==================== */
