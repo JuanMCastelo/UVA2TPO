@@ -240,12 +240,6 @@ footer {
   color:     rgba(255,255,255,0.8);
   text-align: center;
 }
-#calendario-grid .bg-transparent {
-  background-color: transparent !important;
-}
-#calendario-grid .border-0 {
-  border: none !important;
-}
 
 /* Forzar uso de variables en textos */
 h1,h2,h3,h4,h5,h6,
