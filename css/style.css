@@ -270,4 +270,150 @@ p,a,li,span,label,
 .input-field:hover {
   border-color: var(--btn-hover);
 }
-/* ==================== EOF ==================== */
+/* ==================== End of base styles ==================== */
+
+/* ------------------------------------------------- */
+/* Styles for Diseño Web page (namespaced)           */
+/* ------------------------------------------------- */
+body.disenoweb {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #333333;
+}
+body.disenoweb main {
+  flex: 1;
+  padding-bottom: 20px;
+}
+body.disenoweb main h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #003366;
+}
+body.disenoweb .contenedor-principal {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+body.disenoweb .izquierda {
+  flex: 1;
+  max-width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body.disenoweb .derecha {
+  flex: 2;
+  max-width: 66.66%;
+}
+body.disenoweb .fechas,
+body.disenoweb .bibliografia,
+body.disenoweb .actividades {
+  background: #f5f7fa;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+}
+body.disenoweb .fechas ul li,
+body.disenoweb .bibliografia ul li {
+  padding: 12px 8px;
+  border-bottom: 1px solid #c5dbf0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+body.disenoweb .fechas ul li:hover,
+body.disenoweb .bibliografia ul li:hover {
+  background-color: #dceeff;
+  transform: translateY(-2px);
+  border-left: 4px solid #0073e6;
+  cursor: pointer;
+}
+body.disenoweb .fechas ul li:last-child,
+body.disenoweb .bibliografia ul li:last-child {
+  border-bottom: none;
+}
+body.disenoweb .icono {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+body.disenoweb .actividad {
+  background: #ffffff;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+body.disenoweb .actividad:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  background: #f0f8ff;
+}
+body.disenoweb .contenido-actividad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body.disenoweb .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+body.disenoweb .titulo {
+  font-weight: bold;
+  color: #003366;
+}
+body.disenoweb .vencimiento {
+  font-size: 0.9rem;
+  color: #555555;
+}
+body.disenoweb .enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body.disenoweb .btn {
+  background: #0073e6;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+body.disenoweb .btn:hover {
+  background: #005bb5;
+}
+body.disenoweb footer {
+  background: #003366;
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+}
+body.disenoweb .navbar {
+  background-color: #0d6efd !important;
+}
+@media (max-width: 768px) {
+  body.disenoweb .contenedor-principal {
+    flex-direction: column;
+  }
+  body.disenoweb .izquierda,
+  body.disenoweb .derecha {
+    max-width: 100%;
+  }
+  body.disenoweb main h1 {
+    font-size: 1.6rem;
+  }
+}

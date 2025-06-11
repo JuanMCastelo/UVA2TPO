@@ -7,8 +7,7 @@ This repository contains a small static website used to keep track of a 2025 aca
 ```
 assets/            Images used on the site
 css/               Stylesheets
-  style.css        Global styles and dark/light theme variables
-  disenoweb.css    Additional styles for *disenoweb.html*
+  style.css        Global styles and page-specific rules
 js/
   script.js        Theme toggle and contact form validation
 index.html         Home page with navigation and calendar
