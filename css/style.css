@@ -24,6 +24,9 @@
   --text-muted:    #6c757d;
   --bg-form:       #ffffff;
   --btn-hover:     #ef233c;
+  --accent-color:  #003366;
+  --accent-hl:     #0073e6;
+  --accent-hl-hover:#005bb5;
 }
 
 [data-theme="dark"] {
@@ -37,6 +40,9 @@
   --text-muted:    #aaaaaa;
   --bg-form:       #2a2a2a;
   --btn-hover:     #ef233c;
+  --accent-color:  #7ec8ff;
+  --accent-hl:     #3399ff;
+  --accent-hl-hover:#1a8cff;
 }
 
 /* -------------------------------------------------
@@ -291,7 +297,7 @@ body.disenoweb main h1 {
   text-align: center;
   margin: 20px 0;
   font-size: 2rem;
-  color: #003366;
+  color: var(--accent-color);
 }
 body.disenoweb .contenedor-principal {
   display: flex;
@@ -335,7 +341,7 @@ body.disenoweb .fechas ul li:hover,
 body.disenoweb .bibliografia ul li:hover {
   background-color: #dceeff;
   transform: translateY(-2px);
-  border-left: 4px solid #0073e6;
+  border-left: 4px solid var(--accent-hl);
   cursor: pointer;
 }
 body.disenoweb .fechas ul li:last-child,
@@ -372,11 +378,11 @@ body.disenoweb .info {
 }
 body.disenoweb .titulo {
   font-weight: bold;
-  color: #003366;
+  color: var(--accent-color);
 }
 body.disenoweb .vencimiento {
   font-size: 0.9rem;
-  color: #555555;
+  color: var(--text-muted);
 }
 body.disenoweb .enlaces {
   display: flex;
@@ -384,7 +390,7 @@ body.disenoweb .enlaces {
   gap: 8px;
 }
 body.disenoweb .btn {
-  background: #0073e6;
+  background: var(--accent-hl);
   color: #ffffff;
   text-decoration: none;
   padding: 6px 12px;
@@ -394,7 +400,7 @@ body.disenoweb .btn {
   transition: background 0.3s ease;
 }
 body.disenoweb .btn:hover {
-  background: #005bb5;
+  background: var(--accent-hl-hover);
 }
 body.disenoweb footer {
   background: var(--bg-nav);
