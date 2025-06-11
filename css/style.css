@@ -280,8 +280,8 @@ body.disenoweb {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #333333;
+  background: var(--bg-page);
+  color: var(--text-page);
 }
 body.disenoweb main {
   flex: 1;
@@ -314,15 +314,15 @@ body.disenoweb .derecha {
 body.disenoweb .fechas,
 body.disenoweb .bibliografia,
 body.disenoweb .actividades {
-  background: #f5f7fa;
+  background: var(--bg-section);
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 1px solid var(--border-color);
   border-radius: 12px;
 }
 body.disenoweb .fechas ul li,
 body.disenoweb .bibliografia ul li {
   padding: 12px 8px;
-  border-bottom: 1px solid #c5dbf0;
+  border-bottom: 1px solid var(--border-color);
   line-height: 1.8;
   font-size: 1.05rem;
   display: flex;
@@ -347,8 +347,8 @@ body.disenoweb .icono {
   font-size: 1.2rem;
 }
 body.disenoweb .actividad {
-  background: #ffffff;
-  border: 1px solid #dadde1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 15px;
@@ -357,7 +357,7 @@ body.disenoweb .actividad {
 body.disenoweb .actividad:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   transform: translateY(-5px);
-  background: #f0f8ff;
+  background: var(--bg-section);
 }
 body.disenoweb .contenido-actividad {
   display: flex;
@@ -397,13 +397,13 @@ body.disenoweb .btn:hover {
   background: #005bb5;
 }
 body.disenoweb footer {
-  background: #003366;
+  background: var(--bg-nav);
   text-align: center;
   padding: 10px;
-  color: #ffffff;
+  color: var(--text-nav);
 }
 body.disenoweb .navbar {
-  background-color: #0d6efd !important;
+  background-color: var(--bg-nav) !important;
 }
 @media (max-width: 768px) {
   body.disenoweb .contenedor-principal {
