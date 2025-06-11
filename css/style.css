@@ -427,3 +427,19 @@ body.disenoweb .navbar {
     font-size: 1.6rem;
   }
 }
+
+/* ------------------------------------------------- */
+/* Dark mode toggle buttons                          */
+/* ------------------------------------------------- */
+#btn-light, #btn-dark {
+  background: var(--accent-hl);
+  color: #ffffff;
+  border-color: var(--accent-hl);
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+#btn-light:hover, #btn-dark:hover {
+  background: var(--accent-hl-hover);
+  border-color: var(--accent-hl-hover);
+}
