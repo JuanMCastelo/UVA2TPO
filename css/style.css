@@ -67,6 +67,10 @@ main {
 .navbar .nav-link {
   color: var(--text-nav) !important;
 }
+.navbar .nav-link.active {
+  border-bottom: 3px solid var(--accent-hl);
+}
+
 footer {
   background-color: var(--bg-nav);
   color:            var(--text-nav);
