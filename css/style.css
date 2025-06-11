@@ -23,6 +23,7 @@
   --border-color:  #dee2e6;
   --text-muted:    #6c757d;
   --bg-form:       #ffffff;
+  --btn-hover:     #ef233c;
 }
 
 [data-theme="dark"] {
@@ -35,6 +36,7 @@
   --border-color:  #444;
   --text-muted:    #aaaaaa;
   --bg-form:       #2a2a2a;
+  --btn-hover:     #ef233c;
 }
 
 /* -------------------------------------------------
@@ -252,4 +254,19 @@ p,a,li,span,label,
 .bg-light { background-color: var(--bg-section) !important; }
 .bg-white { background-color: var(--bg-page)    !important; }
 .bg-dark  { background-color: var(--bg-nav)     !important; }
+
+/* Campos de formulario */
+.input-field {
+  border: 2px solid var(--border-color);
+  border-radius: .25rem;
+  transition: border-color .3s, box-shadow .3s;
+}
+.input-field:focus {
+  border-color: var(--btn-hover);
+  box-shadow: 0 0 0 .2rem rgba(239,35,60,.25);
+  outline: none;
+}
+.input-field:hover {
+  border-color: var(--btn-hover);
+}
 /* ==================== EOF ==================== */
