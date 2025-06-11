@@ -38,6 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
       return re.test(email);
     }
 
+    /**
+     * Escapes HTML entities to prevent injection
+     * @param {string} str
+     * @returns {string}
+     */
+    function escapeHTML(str) {
+      return str.replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;',
+        '"': '&quot;', "'": '&#39;'
+      })[c]);
+    }
+
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       msgContainer.innerHTML = '';
@@ -69,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         msgContainer.innerHTML = `
           <div class="alert alert-success" role="alert">
-            Gracias por su contacto, <strong>${nombre}</strong>.<br>
+            Gracias por su contacto, <strong>${escapeHTML(nombre)}</strong>.<br>
             En breve le estaré respondiendo.
           </div>`;
         form.reset();
