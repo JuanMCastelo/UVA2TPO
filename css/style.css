@@ -443,3 +443,20 @@ body.disenoweb .navbar {
   background: var(--accent-hl-hover);
   border-color: var(--accent-hl-hover);
 }
+
+/* ------------------------------------------------- */
+/* Reserva espacio para el toggle de tema y evita    */
+/* ------------------------------------------------- */
+.theme-toggle-container {
+  width: 3rem;        /* ajusta según el gap deseado */
+  min-width: 3rem;    /* nunca colapsa */
+  justify-content: space-between;
+}
+
+.theme-toggle-container button {
+  background: none;
+  border: none;
+  font-size: 1.25rem; /* tamaño de icono */
+  padding: 0;
+  cursor: pointer;
+}
