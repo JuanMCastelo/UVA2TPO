@@ -466,3 +466,19 @@ body.disenoweb .navbar {
   padding: 0.25rem;
   cursor: pointer;
 }
+@media (max-width: 576px) {
+  .navbar .navbar-brand {
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+  }
+  .theme-toggle-container {
+    gap: 0.25rem;
+  }
+  .theme-toggle-container button {
+    font-size: 0.875rem;
+  }
+}
