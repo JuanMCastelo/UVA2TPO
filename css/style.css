@@ -12,10 +12,15 @@
 
 /* Mejora de rendimiento: fuentes de Bootstrap Icons */
 @font-face {
-  font-family: "bootstrap-icons";
+  font-family: "bootstrap-icons-swap";
   src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.woff2") format("woff2"),
        url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.woff") format("woff");
   font-display: swap;
+}
+
+/* Forzar uso de la fuente optimizada en los iconos */
+.bi::before {
+  font-family: "bootstrap-icons-swap" !important;
 }
 
 /* -------------------------------------------------
