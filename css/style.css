@@ -262,13 +262,6 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 576px) {
-  #calendario-grid .cal-cell {
-    width: 100%;
-    height: auto;
-  }
-}
-
 /* Forzar uso de variables en textos */
 h1,h2,h3,h4,h5,h6,
 p,a,li,span,label,
