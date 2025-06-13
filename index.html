@@ -4,49 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Organiza materias, avisos y contactos de la cursada 2025.">
-  <link rel="icon" href="assets/image.jpg" type="image/jpeg">
-  <!-- Título de la página -->
+  <link rel="icon" href="assets/image.jpg">
+
   <title>Home - Mi Cursada 2025</title>
 
-  <!-- Preconexión para acelerar la carga de recursos de jsDelivr y Google Fonts -->
+  <!-- Conexiones anticipadas -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Google Font -->
-  <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
-  </noscript>
+  <!-- Preload de todos los estilos -->
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link
+    rel="preload"
+    as="style"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    crossorigin
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link
+    rel="preload"
+    as="style"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    crossorigin
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link
+    rel="preload"
+    as="style"
+    href="css/style.css"
+    onload="this.onload=null;this.rel='stylesheet'">
 
-  <!-- Precarga de CSS de Bootstrap para mejorar rendimiento -->
-  <link rel="preload" as="style"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        crossorigin="anonymous"
-        onload="this.rel='stylesheet'">
-  <!-- Fallback para navegadores sin JavaScript -->
+  <!-- Fallback único para navegadores sin JS -->
   <noscript>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          crossorigin="anonymous">
-  </noscript>
-
-  <!-- Bootstrap Icons: biblioteca de iconos SVG compatibles con Bootstrap -->
-  <link rel="preload" as="style"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-        crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
   </noscript>
-
-  <!--CSS-->
- <link rel="preload" as="style" href="css\style.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css\style.css"></noscript>
 </head>
+
 <body>
   <a href="#main-content" class="visually-hidden-focusable">Saltar al contenido</a>
 
