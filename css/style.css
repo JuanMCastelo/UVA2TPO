@@ -250,7 +250,7 @@ footer {
 }
 #calendario-grid .cal-cell small {
   font-size: 0.95rem;
-  color:     rgba(255,255,255,0.8);
+  color:     #fff;
   text-align: center;
 }
 
