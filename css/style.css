@@ -10,14 +10,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "bootstrap-icons";
-  src: url("bootstrap-icons.woff2") format("woff2"),
-       url("bootstrap-icons.woff") format("woff");
-  font-display: swap;
-}
-
-
 /* -------------------------------------------------
    Theme variables for light & dark mode
    ------------------------------------------------- */
