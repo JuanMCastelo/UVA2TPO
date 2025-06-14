@@ -487,3 +487,10 @@ body.disenoweb .navbar {
     font-size: 0.875rem;
   }
 }
+
+/* Oculta los botones de tema cuando se abre el menú hamburguesa */
+@media (max-width: 768px) {
+  .navbar-collapse.show + .theme-toggle-container {
+    display: none;
+  }
+}
