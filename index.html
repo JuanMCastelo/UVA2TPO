@@ -55,28 +55,35 @@
 <body>
   <a href="#main-content" class="visually-hidden-focusable">Saltar al contenido</a>
 
- <nav class="navbar navbar-expand-md shadow-sm" aria-label="Menú principal">
-  <div class="container d-flex align-items-center">
-    <a class="navbar-brand text-white" href="index.html">Mi Cursada 2025</a>
-    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse flex-fill justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
-        </li>
+<nav class="navbar navbar-expand-md shadow-sm" aria-label="Menú principal">
+  <div class="container flex-column">
+    
+    <!-- Fila fija superior: título + herramientas -->
+    <div class="w-100 d-flex justify-content-between align-items-center">
+      <a class="navbar-brand text-white mb-0" href="index.html">Mi Cursada 2025</a>
+      <div class="nav-tools d-flex align-items-center gap-2">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="theme-toggle-container d-flex align-items-center">
+          <button id="btn-light" aria-label="Modo claro"><i class="bi bi-sun-fill" aria-hidden="true"></i></button>
+          <button id="btn-dark" aria-label="Modo oscuro"><i class="bi bi-moon-fill" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú colapsable -->
+    <div class="collapse navbar-collapse w-100 mt-2" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active text-white" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="avisos.html">Avisos</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="sobremi.html">Sobre mí</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="materias2025.html">Materias 2025</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
       </ul>
     </div>
-    <div class="theme-toggle-container d-flex align-items-center ms-auto">
-      <button id="btn-light" aria-label="Modo claro"><i class="bi bi-sun-fill" aria-hidden="true"></i></button>
-      <button id="btn-dark"  aria-label="Modo oscuro"><i class="bi bi-moon-fill" aria-hidden="true"></i></button>
-    </div>
+
   </div>
 </nav>
 
