@@ -16,12 +16,12 @@
   font-family: 'bootstrap-icons' !important;
   font-style: normal;
   font-weight: normal;
-  speak: never;
   display: inline-block;
   text-decoration: inherit;
   text-align: center;
   white-space: nowrap;
   direction: ltr;
   -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
