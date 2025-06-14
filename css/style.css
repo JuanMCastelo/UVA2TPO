@@ -179,25 +179,6 @@ footer {
 }
 
 /* ------------------------------------------------- */
-/* Ajustes Responsivos                             */
-/* ------------------------------------------------- */
-@media (max-width: 768px) {
-  .materia-nombre {
-    font-size: 1rem;
-  }
-  .etiqueta-virt {
-    font-size: 1rem;
-    padding:   0.5rem 0.75rem;
-  }
-  .sobre-mi-box {
-    padding: 1.5rem;
-  }
-  .texto-box {
-    font-size: 1.05rem;
-  }
-}
-
-/* ------------------------------------------------- */
 /* Hover Tarjetas Index                             */
 /* ------------------------------------------------- */
 .card {
@@ -483,9 +464,21 @@ body.disenoweb .navbar {
   }
 }
 
-/* Oculta los botones de tema cuando se abre el menú hamburguesa */
+/* ------------------------------------------------- */
+/* Ajustes Responsivos                             */
+/* ------------------------------------------------- */
 @media (max-width: 768px) {
-  .navbar-collapse.show + .theme-toggle-container {
-    display: none;
+  .materia-nombre {
+    font-size: 1rem;
+  }
+  .etiqueta-virt {
+    font-size: 1rem;
+    padding:   0.5rem 0.75rem;
+  }
+  .sobre-mi-box {
+    padding: 1.5rem;
+  }
+  .texto-box {
+    font-size: 1.05rem;
   }
 }
