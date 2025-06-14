@@ -18,10 +18,6 @@
   font-display: swap;
 }
 
-/* Forzar uso de la fuente optimizada en los iconos */
-.bi::before {
-  font-family: "bootstrap-icons-swap" !important;
-}
 
 /* -------------------------------------------------
    Theme variables for light & dark mode
